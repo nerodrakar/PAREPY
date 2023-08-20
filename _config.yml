@@ -14,16 +14,16 @@ callouts:
   highlight:
     color: yellow
   important:
-    title: Importante
+    title: Important
     color: blue
   new:
-    title: Novo
+    title: New
     color: green
   note:
-    title: Nota
+    title: Note
     color: purple
   warning:
-    title: Aviso
+    title: Warning
     color: red
   
 kramdown:
@@ -33,6 +33,6 @@ kramdown:
 
 # Back to top link
 back_to_top: true
-back_to_top_text: "Voltar ao início"
+back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2023. Construído por Wanderlei Malaquias Pereira Junior e seu grupo de pesquisa.</a>"
+footer_content: "Copyright &copy 2023 GPEE.</a>"
