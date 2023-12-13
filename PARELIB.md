@@ -2,7 +2,7 @@
 title: Architecture
 layout: home
 nav_order: 1
-parent: Functions
+parent: Fr
 ---
 
 <!--Don't delete ths script-->
