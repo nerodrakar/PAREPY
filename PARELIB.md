@@ -11,34 +11,34 @@ parent: Framework
 <!--Don't delete ths script-->
 
 
+SAMPLING {: .label .label-green }
 <p align = "justify">
-The authors chose functional programming to develop the framework.</code>.
-</p>
-
-<p align = "justify">The SAMPLING function generates a set of random numbers according to a specified distribution type. Input parameters include the number of samples, data dimension, sampling model, and descriptions of variables along with their distributions. The function supports distributions such as Normal, Uniform, Gumbel, Lognormal, and Triangular. It returns an array of random samples and a list of initial states used in the sampling process..</p>
-
-
-<h2><b><code>SAMPLING</code></b></h2>
-<p align = "justify">
-This function generates random samples according to chosen sampling method.
+This algorithm generates a set of random numbers according to a type of distribution.
 </p>
 
 Input variables
 {: .label .label-yellow }
 
 <table style = "width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+    </thead>
     <tr>
-        <td>N_POP</td>
+        <td><code>N_POP</code></td>
         <td>Total of samplings</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td>D</td>
+        <td><code>D</code></td>
         <td>Problem dimension</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td>MODEL</td>
+        <td><code>MODEL</code></td>
         <td>Algorithm setup</td>
         <td>String</td>
     </tr>
@@ -48,12 +48,7 @@ Input variables
         <td></td>
     </tr>
     <tr>
-        <td></td>
-        <td><code>'LHS'</code>: Latim Hypercube Sampling</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>VARS</td>
+        <td><code>VARS</code></td>
         <td>Variables setup <code>[VAR_0, VAR_1, ..., VAR_N]</code></td>
         <td>Py list[D]</td>
     </tr>
@@ -77,24 +72,45 @@ Input variables
         <td>Standard deviation (\(\sigma\))</td>
         <td>Float</td>
     </tr>
+    <tr>
+        <td><code>[3]</code></td>
+        <td>Seed control</td>
+        <td>Integer</td>
+    </tr>
 </table>
 
 {: .note}
-> The list of distributions used in `VARS` are:
-> - Normal or Gaussian = `"NORMAL"`;  
-> - Gumbel Maximum = `"GUMBEL MAX"`;  
-> - Gumbel Minimum = `"GUMBEL MIN"`;    
-> - Log Normal = `"LOGNORMAL"`;  
-> - Uniform = `"UNIFORM"`;  
+<p align = "justify">
+The list of distributions used in <code>VARS</code> are:
+</p>
+<ul>
+<li></li> - Normal or Gaussian = `"NORMAL"`;  
+<li></li> - Gumbel Maximum = `"GUMBEL MAX"`;  
+<li></li> - Gumbel Minimum = `"GUMBEL MIN"`;    
+<li>Log Normal = <code>"LOGNORMAL"</code>code>;</li>
+<li>Uniform = <code>"UNIFORM"</code>;</li>  
+</ul>
 
 Output variables
 {: .label .label-yellow }
 
 <table style = "width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+    </thead>
     <tr>
-        <td>RANDOM_SAMPLING</td>
+        <td><code>RANDOM_SAMPLING<\code></td>
         <td>Samples</td>
         <td>Py Numpy array[N_POP x D]</td>
+    </tr>
+    <tr>
+        <td><code>RANDOM_STATE<\code></td>
+        <td>Seed id</td>
+        <td>Py list[D]</td>
     </tr>
 </table>
 
