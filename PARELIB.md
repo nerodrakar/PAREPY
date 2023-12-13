@@ -1,8 +1,8 @@
 ---
-title: Architecture
+title: Common Library
 layout: home
 nav_order: 1
-parent: Fr
+parent: Framework
 ---
 
 <!--Don't delete ths script-->
