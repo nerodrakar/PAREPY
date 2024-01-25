@@ -1,6 +1,6 @@
 ---
 layout: home
-title: sampling
+title: sampling algorithm
 nav_order: 2
 grand_parent: Framework
 parent: Common Library
@@ -72,16 +72,6 @@ Input variables
     </tr>
 </table>
 
-setup keys:
-'Objective function' (str): Objective function.
-'Number of samples' (int): Number of samples.
-'Dimension' (int): Number of dimensions.
-'Numerical model' (dict): Numerical model settings.
-'Variables settings' (list): Variables settings.
-'Number of state limit functions or constraints' (int):
-Number of state limit functions or constraints.
-'none_variable' (dict): Null dictionary.
-
 Output variables
 {: .label .label-yellow }
 
@@ -94,14 +84,14 @@ Output variables
      </tr>
    </thead>
    <tr>
-       <td><code>random_sampling</code></td>
-       <td>Random samples.</td>
+       <td><code>results_about_data</code></td>
+       <td>Results about data.</td>
        <td>Np array</td>
    </tr>
     <tr>
        <td><code>seeds</code></td>
        <td>Seeds used in the random sampling.</td>
-       <td>Py list</td>
+       <td>Pandas Dataframe</td>
    </tr>
 </table>
 
