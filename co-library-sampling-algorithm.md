@@ -41,37 +41,37 @@ Input variables
         <td></td>
     </tr>
     <tr>
-        <td><code>Objective function</code></td>
+        <td><code>'Objective function'</code></td>
         <td>Objective function.</td>
         <td>String</td>
     </tr>
     <tr>
-        <td><code>Number of samples</code></td>
+        <td><code>'Number of samples'</code></td>
         <td>Number of samples.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>Dimension</code></td>
+        <td><code>'Dimension'</code></td>
         <td>Number of dimensions.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>Numerical model</code></td>
+        <td><code>'Numerical model'</code></td>
         <td>Numerical model settings.</td>
         <td>Py dict</td>
     </tr>
     <tr>
-        <td><code>Variables settings</code></td>
+        <td><code>'Variables settings'</code></td>
         <td>Variables settings.</td>
         <td>Py list</td>
     </tr>
     <tr>
-        <td><code>Number of state limit functions or constraints</code></td>
+        <td><code>'Number of state limit functions or constraints'</code></td>
         <td>Number of state limit functions or constraints.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>none_variable</code></td>
+        <td><code>'none_variable'</code></td>
         <td>Null dictionary.</td>
         <td>Py dict</td>
     </tr>
