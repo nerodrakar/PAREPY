@@ -13,7 +13,8 @@ has_children: false
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete ths script-->
 
-SAMPLING {: .label .label-green }
+SAMPLING
+{: .label .label-green }
 
 <p align = "justify">
 This algorithm generates a set of random numbers according to a type of distribution.
