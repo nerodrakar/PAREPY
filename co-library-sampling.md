@@ -33,7 +33,7 @@ Input variables
     </thead>
     <tr>
         <td><code>n_samples</code></td>
-        <td>Total of samplings</td>
+        <td>Number of samples.</td>
         <td>Integer</td>
     </tr>
     <tr>
@@ -44,43 +44,36 @@ Input variables
     <tr>
         <td><code>model</code></td>
         <td>Model settings</td>
-        <td>String</td>
+        <td>Py dict</td>
     </tr>
     <tr>
         <td>variables_setup</td>
-        <td><code>'MCS'</code>: Monte Carlo Sampling</td>
-        <td></td>
+        <td>Variables settings.</td>
+        <td>Py list</td>
     </tr>
+</table>
+
+Output variables
+{: .label .label-yellow }
+
+<table style = "width:100%">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Description</th>
+       <th>Type</th>
+     </tr>
+   </thead>
+   <tr>
+       <td><code>random_sampling</code></td>
+       <td>Random samples.</td>
+       <td>Np array</td>
+   </tr>
     <tr>
-        <td><code>VARS</code></td>
-        <td>Variables setup <code>[VAR_0, VAR_1, ..., VAR_N]</code></td>
-        <td>Py list[D]</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Variable setup example</td>
-        <td>Py list[D]</td>
-    </tr>
-    <tr>
-        <td><code>[0]</code></td>
-        <td>Type of probability distribution</td>
-        <td>String</td>
-    </tr>
-    <tr>
-        <td><code>[1]</code></td>
-        <td>Mean (\(\mu\))</td>
-        <td>Float</td>
-    </tr>
-    <tr>
-        <td><code>[2]</code></td>
-        <td>Standard deviation (\(\sigma\))</td>
-        <td>Float</td>
-    </tr>
-    <tr>
-        <td><code>[3]</code></td>
-        <td>Seed control</td>
-        <td>Integer</td>
-    </tr>
+       <td><code>seeds</code></td>
+       <td>Seeds used in the random sampling.</td>
+       <td>Py list</td>
+   </tr>
 </table>
 
 {: .note}
