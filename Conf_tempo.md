@@ -11,5 +11,19 @@ nav_order: 1
 
  
 
-<p align = "justify">A definição da probabilidade de falha para problemas de confiabilidade estrutural é realizada identificando o tipo de análise a ser realizada. Em geral, problemas de confiabilidade dependentes do tempo são aqueles onde pelo menos uma das variáveis envolvidas possuem variação ou incerteza relacionadas a evolução do tempo de análise. Os modelos matemáticos que descrevem a evolução desses sistemas ao longo do tempo são denominados processos estocásticos. Para análises dependentes do tempo, um processo estocástico, neste caso apresentado como a variação das ações as quais um edíficio está sujeito, é avaliado de forma a identificar a probabilidade de o mesmo execer a barreira correspondente a resistência da estrutura
+<p align = "justify">A determinação da probabilidade de falha em problemas de confiabilidade estrutural requer a identificação do tipo de análise a ser conduzida. Em geral, problemas de confiabilidade dependentes do tempo são aqueles onde pelo menos uma das variáveis envolvidas possuem variação ou incerteza relacionada à evolução temporal da análise. Nesse cenário, os modelos matemáticos que descrevem a evolução desses sistemas ao longo do tempo são conhecidos como processos estocásticos. Nesta análise, processos estocásticos específicos são utilizados para representar a variação da ação das sobrecargas e da resistência, ambas sujeitas a variações ao longo da vida útil da estrutura. 
+
+A avaliação desses processos estocásticos é essencial para identificar a probabilidade de que a estrutura ultrapasse a barreira de segurança correspondente à sua resistência. Para tal avaliação, tem-se a seguinte definição da equação de estado limite para qualquer tempo t:
+
+ <table border = "0" style = "width: 100%;">
+ <tr>
+   <td align = "left" style = "width: 95%;">\[g (X(t)) = g(Y, X(t),t) = g(R,S,t) = R(t) - S(t)\]</td>
+   <td align = "right" style = "width: 5%;"><p id = "eq1">(1)</p></td>
+ </tr>
+</table>
+
+As análises temporais implicam na definição 
+
+
+
 </p>
