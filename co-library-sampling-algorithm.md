@@ -36,38 +36,43 @@ Input variables
         <td>Py dict</td>
     </tr>
     <tr>
+        <td><code>setup</code></td>
         <td></td>
+        <td></td>
+    </tr>
+    <tr>
         <td><code>Objective function</code></td>
+        <td>Objective function.</td>
         <td>String</td>
     </tr>
     <tr>
-        <td></td>
         <td><code>Number of samples</code></td>
+        <td>Number of samples.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td></td>
         <td><code>Dimension</code></td>
+        <td>Number of dimensions.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td></td>
         <td><code>Numerical model</code></td>
+        <td>Numerical model settings.</td>
         <td>Py dict</td>
     </tr>
     <tr>
-        <td></td>
         <td><code>Variables settings</code></td>
+        <td>Variables settings.</td>
         <td>Py list</td>
     </tr>
     <tr>
-        <td></td>
         <td><code>Number of state limit functions or constraints</code></td>
+        <td>Number of state limit functions or constraints.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td></td>
         <td><code>none_variable</code></td>
+        <td>Null dictionary.</td>
         <td>Py dict</td>
     </tr>
 </table>
