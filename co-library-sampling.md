@@ -1,8 +1,10 @@
 ---
 layout: home
-title: Sampling
+title: sampling
 nav_order: 1
+grand_parent: Framework
 parent: Common Library
+
 has_children: false
 ---
 
@@ -29,22 +31,22 @@ Input variables
       </tr>
     </thead>
     <tr>
-        <td><code>N_POP</code></td>
+        <td><code>n_samples</code></td>
         <td>Total of samplings</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>D</code></td>
-        <td>Problem dimension</td>
+        <td><code>d</code></td>
+        <td>Number of dimensions</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>MODEL</code></td>
-        <td>Algorithm setup</td>
+        <td><code>model</code></td>
+        <td>Model settings</td>
         <td>String</td>
     </tr>
     <tr>
-        <td></td>
+        <td>variables_setup</td>
         <td><code>'MCS'</code>: Monte Carlo Sampling</td>
         <td></td>
     </tr>
