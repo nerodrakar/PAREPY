@@ -47,7 +47,7 @@ Input variables
         <td>Py dict</td>
     </tr>
     <tr>
-        <td>variables_setup</td>
+        <td><code>variables_setup</code></td>
         <td>Variables settings.</td>
         <td>Py list</td>
     </tr>
@@ -95,6 +95,7 @@ Example 1
 <p align = "justify">In this example, we will use the SAMPLING function to generate a set of random samples following a Normal distribution. In this example, two sets of variables will be constructed with this distribution.</p>
 
 ```python
+
 #!pip install PARE-TOOLBOX
 from PARE_TOOLBOX import *
 
