@@ -94,8 +94,13 @@ Output variables
        <td>Np array</td>
    </tr>
     <tr>
-       <td><code>seeds</code></td>
-       <td>Seeds used in the random sampling.</td>
-       <td>Pandas Dataframe</td>
+       <td><code>failure_prob_list</code></td>
+       <td>Failure probability list</td>
+       <td>Py list</td>
+   </tr>
+    <tr>
+       <td><code>beta_lsit</code></td>
+       <td>Beta list</td>
+       <td>Py list</td>
    </tr>
 </table>
