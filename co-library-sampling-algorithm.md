@@ -36,7 +36,7 @@ Input variables
         <td>Py dict</td>
     </tr>
     <tr>
-        <td><code>setup</code></td>
+        <td><code>setup</code> keys</td>
         <td></td>
         <td></td>
     </tr>
