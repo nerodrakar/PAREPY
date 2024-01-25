@@ -53,6 +53,19 @@ Input variables
     </tr>
 </table>
 
+{: .note}
+
+<p align = "justify">
+The list of distributions used in <code>VARS</code> are:
+</p>
+<ul>
+<li></li> - Normal or Gaussian = `"NORMAL"`;  
+<li></li> - Gumbel Maximum = `"GUMBEL MAX"`;  
+<li></li> - Gumbel Minimum = `"GUMBEL MIN"`;    
+<li>Log Normal = <code>"LOGNORMAL"</code>code>;</li>
+<li>Uniform = <code>"UNIFORM"</code>;</li>  
+</ul>
+
 Output variables
 {: .label .label-yellow }
 
@@ -74,42 +87,6 @@ Output variables
        <td>Seeds used in the random sampling.</td>
        <td>Py list</td>
    </tr>
-</table>
-
-{: .note}
-
-<p align = "justify">
-The list of distributions used in <code>VARS</code> are:
-</p>
-<ul>
-<li></li> - Normal or Gaussian = `"NORMAL"`;  
-<li></li> - Gumbel Maximum = `"GUMBEL MAX"`;  
-<li></li> - Gumbel Minimum = `"GUMBEL MIN"`;    
-<li>Log Normal = <code>"LOGNORMAL"</code>code>;</li>
-<li>Uniform = <code>"UNIFORM"</code>;</li>  
-</ul>
-
-Output variables
-{: .label .label-yellow }
-
-<table style = "width:100%">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-      </tr>
-    </thead>
-    <tr>
-        <td><code>RANDOM_SAMPLING<\code></td>
-        <td>Samples</td>
-        <td>Py Numpy array[N_POP x D]</td>
-    </tr>
-    <tr>
-        <td><code>RANDOM_STATE<\code></td>
-        <td>Seed id</td>
-        <td>Py list[D]</td>
-    </tr>
 </table>
 
 Example 1
