@@ -99,6 +99,3 @@ Output variables
        <td>Pandas Dataframe</td>
    </tr>
 </table>
-
-Example 1
-{: .label .label-green }
