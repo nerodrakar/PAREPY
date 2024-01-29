@@ -1,8 +1,10 @@
 ---
-title: Common Library
 layout: home
+title: sampling
 nav_order: 1
-parent: Framework
+grand_parent: Framework
+parent: Common Library
+has_children: false
 ---
 
 <!--Don't delete ths script-->
@@ -10,8 +12,9 @@ parent: Framework
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete ths script-->
 
+SAMPLING
+{: .label .label-green }
 
-SAMPLING {: .label .label-green }
 <p align = "justify">
 This algorithm generates a set of random numbers according to a type of distribution.
 </p>
@@ -28,58 +31,29 @@ Input variables
       </tr>
     </thead>
     <tr>
-        <td><code>N_POP</code></td>
-        <td>Total of samplings</td>
+        <td><code>n_samples</code></td>
+        <td>Number of samples.</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>D</code></td>
-        <td>Problem dimension</td>
+        <td><code>d</code></td>
+        <td>Number of dimensions</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>MODEL</code></td>
-        <td>Algorithm setup</td>
-        <td>String</td>
+        <td><code>model</code></td>
+        <td>Model settings</td>
+        <td>Py dict</td>
     </tr>
     <tr>
-        <td></td>
-        <td><code>'MCS'</code>: Monte Carlo Sampling</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>VARS</code></td>
-        <td>Variables setup <code>[VAR_0, VAR_1, ..., VAR_N]</code></td>
-        <td>Py list[D]</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Variable setup example</td>
-        <td>Py list[D]</td>
-    </tr>
-    <tr>
-        <td><code>[0]</code></td>
-        <td>Type of probability distribution</td>
-        <td>String</td>
-    </tr>
-    <tr>
-        <td><code>[1]</code></td>
-        <td>Mean (\(\mu\))</td>
-        <td>Float</td>
-    </tr>
-    <tr>
-        <td><code>[2]</code></td>
-        <td>Standard deviation (\(\sigma\))</td>
-        <td>Float</td>
-    </tr>
-    <tr>
-        <td><code>[3]</code></td>
-        <td>Seed control</td>
-        <td>Integer</td>
+        <td><code>variables_setup</code></td>
+        <td>Variables settings.</td>
+        <td>Py list</td>
     </tr>
 </table>
 
 {: .note}
+
 <p align = "justify">
 The list of distributions used in <code>VARS</code> are:
 </p>
@@ -95,23 +69,23 @@ Output variables
 {: .label .label-yellow }
 
 <table style = "width:100%">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-      </tr>
-    </thead>
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Description</th>
+       <th>Type</th>
+     </tr>
+   </thead>
+   <tr>
+       <td><code>random_sampling</code></td>
+       <td>Random samples.</td>
+       <td>Np array</td>
+   </tr>
     <tr>
-        <td><code>RANDOM_SAMPLING<\code></td>
-        <td>Samples</td>
-        <td>Py Numpy array[N_POP x D]</td>
-    </tr>
-    <tr>
-        <td><code>RANDOM_STATE<\code></td>
-        <td>Seed id</td>
-        <td>Py list[D]</td>
-    </tr>
+       <td><code>seeds</code></td>
+       <td>Seeds used in the random sampling.</td>
+       <td>Py list</td>
+   </tr>
 </table>
 
 Example 1
@@ -120,6 +94,7 @@ Example 1
 <p align = "justify">In this example, we will use the SAMPLING function to generate a set of random samples following a Normal distribution. In this example, two sets of variables will be constructed with this distribution.</p>
 
 ```python
+
 #!pip install PARE-TOOLBOX
 from PARE_TOOLBOX import *
 
@@ -141,7 +116,6 @@ print(randomStates)
 
 <p align = "center"><b>Figure 1.</b> Normal distribution using Sampling function.</p>
 <center><img src="assets/images/normal_distribution.png" width="70%"></center>
-
 
 Example 2
 {: .label .label-yellow }
@@ -174,7 +148,7 @@ COLUMN = 'col1'
 CHART_CONFIG = {
               'NAME': f"{COLUMN}_Histogram",
               'EXTENSION': 'svg',
-              'WIDTH': 0.20, 
+              'WIDTH': 0.20,
               'HEIGHT': 0.10,
               'X AXIS LABEL': '$x_{i}$ variable',
               'X AXIS SIZE': 15.5,
@@ -182,17 +156,17 @@ CHART_CONFIG = {
               'Y AXIS SIZE': 15.5,
               'AXISES COLOR': '#000000',
               'LABELS SIZE': 15.5,
-              'LABELS COLOR': '#000000', 
+              'LABELS COLOR': '#000000',
               'CHART COLOR': '#2219F0',
               'BINS': 20,
               'DPI': 600,
              }
 
-# Data statement 
+# Data statement
 DATA = {
          'DATASET': DF,
-         'COLUMN': COLUMN        
-       }  
+         'COLUMN': COLUMN
+       }
 
 # Call function
 HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
@@ -200,7 +174,6 @@ HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
 
 <p align = "center"><b>Figure 2.</b> Gumbel Distribution using Sampling function.</p>
 <center><img src="assets/images/gumbelmax_distribution.png" width="70%"></center>
-
 
 Example 3
 {: .label .label-yellow }
@@ -233,7 +206,7 @@ COLUMN = 'col1'
 CHART_CONFIG = {
               'NAME': f"{COLUMN}_Histogram",
               'EXTENSION': 'svg',
-              'WIDTH': 0.20, 
+              'WIDTH': 0.20,
               'HEIGHT': 0.10,
               'X AXIS LABEL': '$x_{i}$ variable',
               'X AXIS SIZE': 15.5,
@@ -241,17 +214,17 @@ CHART_CONFIG = {
               'Y AXIS SIZE': 15.5,
               'AXISES COLOR': '#000000',
               'LABELS SIZE': 15.5,
-              'LABELS COLOR': '#000000', 
+              'LABELS COLOR': '#000000',
               'CHART COLOR': '#2219F0',
               'BINS': 20,
               'DPI': 600,
              }
 
-# Data statement 
+# Data statement
 DATA = {
          'DATASET': DF,
-         'COLUMN': COLUMN        
-       }  
+         'COLUMN': COLUMN
+       }
 
 # Call function
 HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
@@ -263,7 +236,6 @@ HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
 Example 4
 
 In this new example, we will utilize the SAMPLING function once again to generate a set of random samples following a Lognormal distribution. The Lognormal distribution is frequently employed to model data with positive skewness and non-symmetrical distribution. We will set the number of samples to 2000 and the dimension to 1. Employing the "MCS" (Monte Carlo Sampling) sampling model, we will configure a variable with a Lognormal distribution, specifying the shape and location parameters. Through this example, we aim to illustrate how the SAMPLING function can be applied to generate random samples adhering to diverse distributions.
-
 
 ```python
 pip install PARE-TOOLBOX
@@ -291,7 +263,7 @@ COLUMN = 'col1'
 CHART_CONFIG = {
               'NAME': f"{COLUMN}_Histogram",
               'EXTENSION': 'svg',
-              'WIDTH': 0.20, 
+              'WIDTH': 0.20,
               'HEIGHT': 0.10,
               'X AXIS LABEL': '$x_{i}$ variable',
               'X AXIS SIZE': 15.5,
@@ -299,17 +271,17 @@ CHART_CONFIG = {
               'Y AXIS SIZE': 15.5,
               'AXISES COLOR': '#000000',
               'LABELS SIZE': 15.5,
-              'LABELS COLOR': '#000000', 
+              'LABELS COLOR': '#000000',
               'CHART COLOR': '#2219F0',
               'BINS': 20,
               'DPI': 600,
              }
 
-# Data statement 
+# Data statement
 DATA = {
          'DATASET': DF,
-         'COLUMN': COLUMN        
-       }  
+         'COLUMN': COLUMN
+       }
 
 # Call function
 HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
