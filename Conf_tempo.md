@@ -22,7 +22,9 @@ A avaliação desses processos estocásticos é essencial para identificar a pro
  </tr>
 </table>
 
-As análises temporais implicam na definição 
+Em análises temporais, a probabilidade de falha em um intervalo de tempo qualquer [t1,t2] é conhecida como probabilidade de falha acumulada, e é dada por:
+
+TESTE
 
 
 
