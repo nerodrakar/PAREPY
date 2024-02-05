@@ -50,23 +50,37 @@ Input variables
         <td>Variables settings.</td>
         <td>Py list</td>
     </tr>
+    <tr>
+        <td></td>
+        <td>type_dist</td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>mean_dist</td>
+        <td>Float</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>stda_dist</td>
+        <td>Float</td>
+    </tr>
 </table>
 
 {: .note}
 
 <p align = "justify">
-The list of distributions used in <code>VARS</code> are:
+The list of distributions used in <code>type_dist</code> are:
 </p>
 <ul>
-<li></li> - Normal or Gaussian = `"NORMAL"`;  
-<li></li> - Gumbel Maximum = `"GUMBEL MAX"`;  
-<li></li> - Gumbel Minimum = `"GUMBEL MIN"`;    
-<li>Log Normal = <code>"LOGNORMAL"</code>code>;</li>
-<li>Uniform = <code>"UNIFORM"</code>;</li>  
+<li></li>Normal or Gaussian = <code>"gaussian"</code> or <code>"normal"</code>;  
+<li></li>Gumbel Maximum = <code>"gumbel max"</code>;  
+<li></li>Gumbel Minimum = <code>"gumbel min"</code>;    
+<li>Log Normal = <code>"lognormal"</code>;</li>
 </ul>
 
 Output variables
-{: .label .label-yellow }
+{: .label .label-yellow
 
 <table style = "width:100%">
    <thead>
