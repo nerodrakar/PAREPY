@@ -108,24 +108,60 @@ Example 1
 <p align = "justify">In this example, we will use the SAMPLING function to generate a set of random samples following a Normal distribution. In this example, two sets of variables will be constructed with this distribution.</p>
 
 ```python
+import parepy_toolbox.common_library as parepyco
+import seaborn as sns
+import scipy.stats as stats
+import matplotlib.pyplot as plt
 
-#!pip install PARE-TOOLBOX
-from PARE_TOOLBOX import *
 
-randomNumbers, randomStates = SAMPLING(N_POP = 5, D = 2, MODEL = 'MCS', VARS = [['NORMAL', 0, 1], ['NORMAL', 5, 1.2]])
-print(randomNumbers)
+N_POP = 5
+DEAD_LOAD = ['NORMAL', 7.64, 7.64 * 0.1, 5, None]
+LIVE_LOAD = ['GUMBEL MAX', 1.43 * 0.93, 1.43 * 0.93 * 0.2, 1, None]
+VARS = [DEAD_LOAD, LIVE_LOAD]
 
-print(randomStates)
+
+setup = {
+             'number of samples': N_POP,
+             'number of dimensions': len(VARS),
+             'numerical model': {'model sampling': 'mcs-time', 'time analysis': 5},
+             'variables settings': VARS
+}
+
+n_samples = setup['number of samples']
+n_dimensions = setup['number of dimensions']
+model = setup['numerical model']
+variables_settings = setup['variables settings']
+
+RESULTS = parepyco.sampling(n_samples=N_POP, d=len(VARS), model=model, variables_setup=VARS)
+RESULTS
 ```
 
 ```cmd
-[[ 1.22059024  5.12709222]
- [-0.96520732  3.86123554]
- [ 0.67916488  4.69650537]
- [ 0.03988433  5.31350454]
- [ 0.66733767  5.9521967 ]]
-
-[210, 367]
+[[6.83609159 1.53252329 0.        ]
+ [7.54539986 1.53252329 1.        ]
+ [8.04946859 1.53252329 2.        ]
+ [7.06920038 1.53252329 3.        ]
+ [7.75960886 1.53252329 4.        ]
+ [6.43441017 1.78318922 0.        ]
+ [6.33214883 1.78318922 1.        ]
+ [7.49208404 1.78318922 2.        ]
+ [6.29466462 1.78318922 3.        ]
+ [8.15833042 1.78318922 4.        ]
+ [8.49374583 1.65313961 0.        ]
+ [8.01906746 1.65313961 1.        ]
+ [7.32412418 1.65313961 2.        ]
+ [6.66147404 1.65313961 3.        ]
+ [7.08136507 1.65313961 4.        ]
+ [7.40001279 2.80060108 0.        ]
+ [8.74154543 2.80060108 1.        ]
+ [7.86104433 2.80060108 2.        ]
+ [7.01466488 2.80060108 3.        ]
+ [9.28192454 2.80060108 4.        ]
+ [6.90492851 1.03645123 0.        ]
+ [6.78401896 1.03645123 1.        ]
+ [6.70542507 1.03645123 2.        ]
+ [7.11541733 1.03645123 3.        ]
+ [7.30156533 1.03645123 4.        ]]
 ```
 
 <p align = "center"><b>Figure 1.</b> Normal distribution using Sampling function.</p>
