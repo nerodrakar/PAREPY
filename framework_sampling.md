@@ -69,7 +69,7 @@ Input variables
     <tr>
         <td></td>
         <td>index <code>[3]</code> \(=\) Seeds used in the random sampling</td>
-        <td>Integer</td>
+        <td>Integer or None</td>
     </tr>
 </table>
 
@@ -163,7 +163,7 @@ Output variables
 Example 1
 {: .label .label-blue }
 
-<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean\(\mu = 3\) and standard deviation\(\sigma = 1\).</p>
+<p align = "justify"><i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=10)\) following a Normal distribution with mean\(\mu = 3\) and standard deviation\(\sigma = 1\).</i></p>
 
 ```python
 from parepy_toolbox import sampling
