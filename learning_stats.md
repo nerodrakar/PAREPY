@@ -1,9 +1,10 @@
 ---
 layout: home
-title: Learning
-nav_order: 2
+parent: Learning
+nav_order: 1
 has_children: true
 has_toc: true
+title: Statistical concepts
 ---
 
 <!--Don't delete this script-->
@@ -11,4 +12,4 @@ has_toc: true
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete this script-->
 
-<p align="justify">In this section, we will show some concepts about probabilistic modeling. The concepts are related to numerical methods developed in this framework.</p>
+<p align="justify">Under construction.</p>
