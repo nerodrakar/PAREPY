@@ -1,69 +1,47 @@
----
-layout: home
-title: Crude Monte Carlo
-nav_order: 2
-parent: Quick Start
-has_children: false
----
-
 <!--Don't delete this script-->
 <script src = "https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete this script-->
 
-<h1>Crude Monte Carlo</h1>
+<h1>Steel beam and progressive damage</h1>
 
-Example
-{: .label .label-green }
 <p align="justify">
 A simply supported timber beam of length 5 \(m\) is loaded with a central load Q having mean \(\mu_Q =\) 3 \(kN\) and with a coefficient of variation (COV) of 0.33 (Normal distribuition). The bending strength of similar beams has been found to have a mean strength \(\mu_R =\) 10 \(kN.m\) with a coefficient of variation (COV) of 0.15 (Normal distribuition). It is desired to evaluate the probability of failure.
 </p> 
 
-<h1><code>example_main.ipynb</code></h1>
-
-
-<p align="justify">
-In this section, we will describe the <code>example_main</code> file and its characteristics.</p> 
+of_file
+{: .label .label-green }
 
 ```python
-# Import Library
-# pip install PARE-TOOLBOX (use this instruction in first time)
-from PARE_TOOLBOX import *
-from OF_FUNCTION import *
-import pandas as pd
-pd.set_option('display.max_columns', None)
+def nowak_example(x, none_variable):
+    """Objective function for the Nowak example (tutorial).
+    """
+    # Time id and value
+    id_analysis = int(x[-1])
+    time_step = none_variable['time analysis']
+    t_i = time_step[id_analysis]
 
-# Call Algorithm
-# Samples
-N_POP = 1000000
+    # Random variables
+    f_y = x[0]
+    p_load = x[1]
+    w_load = x[2]
+    if t_i == 0:
+        degrad = 1
+    else:
+        degrad = 1 - (0.2/t_i)/100
 
-# Variables
-D = 2
-LOAD = ['NORMAL', 3, 0.33 * 3] # First variable in list
-RESISTANCE = ['NORMAL', 10.0, 0.15 * 10.00] # Second variable in list 
-VARS = [LOAD, RESISTANCE]
-N_G = 1
+    # Capacity and demand
+    capacity = 80*f_y*degrad
+    demand = 54*p_load + 5832*w_load
 
-# Model
-MODEL = 'MCS'
+    # State limit function
+    constraint = demand - capacity
 
-# Design dataset
-NULL_DIC = None # or NULL_DIC = {'LENGHT (m)': 5}
-
-# PAREpy setup
-SETUP = {
-            'N_POP': N_POP, 
-             'D': D, 
-             'MODEL': MODEL, 
-             'VARS': VARS, 
-             'N_G': 23, 
-             'NULL_DIC': NULL_DIC,
-             'OF': MY_FUNCTION
-        }
-
-# Run main algorithm
-RESULTS = SAMPLING_ALGORITHM(SETUP)
+    return [capacity], [demand], [constraint]
 ```
+
+your_problem
+{: .label .label-green }
 
 <h1><code>of_file.py</code></h1>
 

@@ -3,7 +3,7 @@ layout: home
 title: Quick Start
 nav_order: 2
 has_children: true
-has_toc: false
+has_toc: true
 ---
 
 <!--Don't delete this script-->
@@ -29,10 +29,5 @@ pip install parepy-toolbox
        └── your_problem.ipynb # or your_problem.py
        └── other files
 ```
-<p align="justify">The <code>of_file.py</code> file should contain the objective function of the problem. The <code>your_problem</code> file is the file that will contain the call to the main function and other settings necessary for the use of the algorithm. An example the file structures is shown below:</p>
-
-Structural example
-{: .label .label-blue }
-
-<p align="justify">See this example on the Learning page:</p>
+<p align="justify">The <code>of_file.py</code> file should contain the objective function of the problem. The <code>your_problem</code> file is the file that will contain the call to the main function and other settings necessary for the use of the algorithm.</p>
 
