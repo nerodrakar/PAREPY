@@ -48,23 +48,23 @@ Input variables
         <td>Py list</td>
     </tr>
     <tr>
-        <td></code></td>
-        <td>index <code>[0] \[=\] Type of distribution</td>
+        <td></td>
+        <td>index <code>[0]</code> \[=\] Type of distribution</td>
         <td>String</td>
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[1] \[=\] Mean of the distribution</td>
+        <td>index <code>[1]</code> \[=\] Mean of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
-        <td></code></td>
-        <td>index <code>[2] \[=\] Standard deviation of the distribution</td>
+        <td></td>
+        <td>index <code>[2]</code> \[=\] Standard deviation of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
-        <td></code></td>
-        <td>index <code>[3] \[=\] Seeds used in the random sampling</td>
+        <td></td>
+        <td>index <code>[3]</code> \[=\] Seeds used in the random sampling</td>
         <td>Integer</td>
     </tr>
 </table>
