@@ -1,10 +1,16 @@
+---
+layout: home
+parent: Framework
+nav_order: 1
+has_children: false
+has_toc: false
+title: Sampling
+---
+
 <!--Don't delete ths script-->
 <script src = "https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete ths script-->
-
-SAMPLING
-{: .label .label-green }
 
 <p align = "justify">
 This algorithm generates a set of random numbers according to a type of distribution.
@@ -23,7 +29,7 @@ Input variables
     </thead>
     <tr>
         <td><code>n_samples</code></td>
-        <td>Number of samples.</td>
+        <td>Number of samples</td>
         <td>Integer</td>
     </tr>
     <tr>
@@ -38,40 +44,102 @@ Input variables
     </tr>
     <tr>
         <td><code>variables_setup</code></td>
-        <td>Variables settings.</td>
+        <td>Variables settings</td>
         <td>Py list</td>
     </tr>
     <tr>
-        <td></td>
-        <td>type_dist</td>
+        <td>index <code>[0]</code></td>
+        <td>Type of distribution</td>
         <td>String</td>
     </tr>
     <tr>
-        <td></td>
-        <td>mean_dist</td>
+        <td>index <code>[1]</code></td>
+        <td>Mean of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
-        <td></td>
-        <td>stda_dist</td>
+        <td>index <code>[2]</code></td>
+        <td>Standard deviation of the distribution</td>
         <td>Float</td>
+    </tr>
+    <tr>
+        <td>index <code>[3]</code></td>
+        <td>Seeds used in the random sampling</td>
+        <td>Integer</td>
     </tr>
 </table>
 
-{: .note}
+<p align = "justify">
+When it is necessary to generate a sample for time series, use the input presented below.
+</p>
+
+<table style = "width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tr>
+        <td><code>n_samples</code></td>
+        <td>Number of samples</td>
+        <td>Integer</td>
+    </tr>
+    <tr>
+        <td><code>d</code></td>
+        <td>Number of dimensions</td>
+        <td>Integer</td>
+    </tr>
+    <tr>
+        <td><code>model</code></td>
+        <td>Model settings</td>
+        <td>Py dict</td>
+    </tr>
+    <tr>
+        <td><code>variables_setup</code></td>
+        <td>Variables settings</td>
+        <td>Py list</td>
+    </tr>
+    <tr>
+        <td>index <code>[0]</code></td>
+        <td>Type of distribution</td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td>index <code>[1]</code></td>
+        <td>Mean of the distribution</td>
+        <td>Float</td>
+    </tr>
+    <tr>
+        <td>index <code>[2]</code></td>
+        <td>Standard deviation of the distribution</td>
+        <td>Float</td>
+    </tr>
+    <tr>
+        <td>index <code>[3]</code></td>
+        <td>Number of time steps in temporal analysis</td>
+        <td>Integer</td>
+    </tr>
+    <tr>
+        <td>index <code>[4]</code></td>
+        <td>Seeds used in the random sampling</td>
+        <td>Integer</td>
+    </tr>
+</table>
 
 <p align = "justify">
 The list of distributions used in <code>type_dist</code> are:
 </p>
 <ul>
-<li></li>Normal or Gaussian = <code>"gaussian"</code> or <code>"normal"</code>;  
-<li></li>Gumbel Maximum = <code>"gumbel max"</code>;  
-<li></li>Gumbel Minimum = <code>"gumbel min"</code>;    
+<li>Normal or Gaussian = <code>"gaussian"</code> or <code>"normal"</code>;</li>  
+<li>Gumbel Maximum = <code>"gumbel max"</code>; </li> 
+<li>Gumbel Minimum = <code>"gumbel min"</code>;</li>    
 <li>Log Normal = <code>"lognormal"</code>;</li>
 </ul>
 
 Output variables
-{: .label .label-yellow
+{: .label .label-yellow}
 
 <table style = "width:100%">
    <thead>
@@ -84,19 +152,14 @@ Output variables
    <tr>
        <td><code>random_sampling</code></td>
        <td>Random samples.</td>
-       <td>Np array</td>
-   </tr>
-    <tr>
-       <td><code>seeds</code></td>
-       <td>Seeds used in the random sampling.</td>
-       <td>Py list</td>
+       <td>Numpy array</td>
    </tr>
 </table>
 
 Example 1
 {: .label .label-green }
 
-<p align = "justify">In this example, we will use the SAMPLING function to generate a set of random samples following a Normal distribution. In this example, two sets of variables will be constructed with this distribution.</p>
+<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples following a Normal distribution. In this example, two sets of variables will be constructed with this distribution.</p>
 
 ```python
 import parepy_toolbox.common_library as parepyco
