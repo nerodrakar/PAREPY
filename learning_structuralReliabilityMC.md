@@ -5,7 +5,7 @@ parent: Structural Reliability
 nav_order: 1
 has_children: false
 has_toc: false
-title: Structural Reliability - Sampling methods
+title: Sampling methods
 ---
 
 <!--Don't delete this script-->
