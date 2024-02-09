@@ -4,7 +4,7 @@ parent: Framework
 nav_order: 1
 has_children: false
 has_toc: false
-title: Sampling
+title: sampling
 ---
 
 <!--Don't delete ths script-->
