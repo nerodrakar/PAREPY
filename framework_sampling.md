@@ -12,6 +12,10 @@ title: sampling
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete ths script-->
 
+```python
+random_sampling = sampling(n_samples, d, model, variables_setup)
+```
+
 <p align = "justify">
 This algorithm generates a set of random numbers according to a type of distribution.
 </p>
@@ -49,22 +53,22 @@ Input variables
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[0]</code> \[=\] Type of distribution</td>
+        <td>index <code>[0]</code> \(=\) Type of distribution</td>
         <td>String</td>
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[1]</code> \[=\] Mean of the distribution</td>
+        <td>index <code>[1]</code> \(=\) Mean of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[2]</code> \[=\] Standard deviation of the distribution</td>
+        <td>index <code>[2]</code> \(=\) Standard deviation of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[3]</code> \[=\] Seeds used in the random sampling</td>
+        <td>index <code>[3]</code> \(=\) Seeds used in the random sampling</td>
         <td>Integer</td>
     </tr>
 </table>
@@ -157,65 +161,73 @@ Output variables
 </table>
 
 Example 1
-{: .label .label-green }
+{: .label .label-blue }
 
-<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples following a Normal distribution. In this example, two sets of variables will be constructed with this distribution.</p>
+<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean\(\mu = 3\) and standard deviation\(\sigma = 1\).</p>
 
 ```python
-import parepy_toolbox.common_library as parepyco
-import seaborn as sns
-import scipy.stats as stats
-import matplotlib.pyplot as plt
+from parepy_toolbox import sampling
 
+# Dataset
+x = ['normal', 3, 1, None]
+vars_set = [x]
+model = {'model sampling': 'mcs'}
 
-N_POP = 5
-DEAD_LOAD = ['NORMAL', 7.64, 7.64 * 0.1, 5, None]
-LIVE_LOAD = ['GUMBEL MAX', 1.43 * 0.93, 1.43 * 0.93 * 0.2, 1, None]
-VARS = [DEAD_LOAD, LIVE_LOAD]
+# Call function
+random_set = sampling(n_samples=10, d=len(vars_set), model=model, variables_setup=vars_set)
 
-
-setup = {
-             'number of samples': N_POP,
-             'number of dimensions': len(VARS),
-             'numerical model': {'model sampling': 'mcs-time', 'time analysis': 5},
-             'variables settings': VARS
-}
-
-n_samples = setup['number of samples']
-n_dimensions = setup['number of dimensions']
-model = setup['numerical model']
-variables_settings = setup['variables settings']
-
-RESULTS = parepyco.sampling(n_samples=N_POP, d=len(VARS), model=model, variables_setup=VARS)
-RESULTS
+# Output details
+print('random variables: \n\n', random_set)
 ```
 
-```cmd
-[[6.83609159 1.53252329 0.        ]
- [7.54539986 1.53252329 1.        ]
- [8.04946859 1.53252329 2.        ]
- [7.06920038 1.53252329 3.        ]
- [7.75960886 1.53252329 4.        ]
- [6.43441017 1.78318922 0.        ]
- [6.33214883 1.78318922 1.        ]
- [7.49208404 1.78318922 2.        ]
- [6.29466462 1.78318922 3.        ]
- [8.15833042 1.78318922 4.        ]
- [8.49374583 1.65313961 0.        ]
- [8.01906746 1.65313961 1.        ]
- [7.32412418 1.65313961 2.        ]
- [6.66147404 1.65313961 3.        ]
- [7.08136507 1.65313961 4.        ]
- [7.40001279 2.80060108 0.        ]
- [8.74154543 2.80060108 1.        ]
- [7.86104433 2.80060108 2.        ]
- [7.01466488 2.80060108 3.        ]
- [9.28192454 2.80060108 4.        ]
- [6.90492851 1.03645123 0.        ]
- [6.78401896 1.03645123 1.        ]
- [6.70542507 1.03645123 2.        ]
- [7.11541733 1.03645123 3.        ]
- [7.30156533 1.03645123 4.        ]]
+```bash
+random variables: 
+
+ [[4.83211826]
+ [2.54537651]
+ [2.98509002]
+ [3.92658834]
+ [4.94070085]
+ [4.66545679]
+ [3.69488262]
+ [3.0909251 ]
+ [4.10526687]
+ [4.2336168 ]]
+```
+
+Example 2
+{: .label .label-blue }
+
+<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean\(\mu = 3\) and standard deviation\(\sigma = 1\).</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+x = ['normal', 3, 1, None]
+vars_set = [x]
+model = {'model sampling': 'mcs'}
+
+# Call function
+random_set = sampling(n_samples=10, d=len(vars_set), model=model, variables_setup=vars_set)
+
+# Output details
+print('random variables: \n\n', random_set)
+```
+
+```bash
+random variables: 
+
+ [[4.83211826]
+ [2.54537651]
+ [2.98509002]
+ [3.92658834]
+ [4.94070085]
+ [4.66545679]
+ [3.69488262]
+ [3.0909251 ]
+ [4.10526687]
+ [4.2336168 ]]
 ```
 
 <p align = "center"><b>Figure 1.</b> Normal distribution using Sampling function.</p>
