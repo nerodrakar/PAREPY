@@ -406,4 +406,26 @@ HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
 <p align = "center"><b>Figure 3.</b> Gumbel Distribution using Sampling function.</p>
 <center><img src="assets/images/lognormal_distribution.png" width="70%"></center>
 
+Example 5
+{: .label .label-yellow }
+
+<p align = "justify">In the context of Monte Carlo Sampling (MCS), the task involves simultaneously generating samples for two variables: one following a normal distribution and the other a maximum Gumbel distribution. Employing the sampling function, the first variable, characterized by a normal distribution, is assigned parameters such as mean (e.g., 10) and standard deviation (e.g., 2). Simultaneously, for the second variable, governed by a maximum Gumbel distribution, the sampling function utilizes assigned parameters like mean (e.g., 5) and standard deviation (e.g., 2). The mean and standard deviation for the normal distribution play crucial roles in shaping the characteristics of the jointly generated samples. Ensuring a sufficient number of samples for statistically meaningful results, the outcomes derived from MCS will be scrutinized for their reliability in statistical analysis.</p>
+
+
+```python
+pip install PARE-TOOLBOX
+from PARE_TOOLBOX import *
+import numpy as np
+import pandas as pd
+
+
+N_POP = 10
+DEAD_LOAD = ['NORMAL', 7.64, 7.64 * 0.1, 5, None]
+LIVE_LOAD = ['LOGNORMAL', 0.431, 0.259, 1, None]
+VARS = [DEAD_LOAD, LIVE_LOAD]
+numerical_model = {'model sampling': 'mcs-time', 'time analysis': 5}
+
+RESULTS = parepyco.sampling(n_samples=N_POP, d=len(VARS), model=numerical_model, variables_setup=VARS)
+
+
 [Notebook example](https://mega.nz/file/31FFDIAZ#zVEB5y81VjlbIazIijpgqzTFTxLtmqJVpnA6QAF7vjA){: .btn .btn-outline }
