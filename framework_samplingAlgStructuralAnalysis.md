@@ -15,6 +15,10 @@ title: sampling_algorithm_structural_analysis
 SAMPLING ALGORITHM
 {: .label .label-green }
 
+```python
+df_results, pf, beta = sampling_algorithm_structural_analysis(setup)
+```
+
 <p align = "justify">
 This function creates the samples and evaluates the limit state functions.
 </p>
@@ -99,8 +103,104 @@ Output variables
        <td>Py list</td>
    </tr>
     <tr>
-       <td><code>beta_lsit</code></td>
+       <td><code>beta_list</code></td>
        <td>Beta list</td>
        <td>Py list</td>
    </tr>
 </table>
+
+Example 1
+{: .label .label-yellow }
+
+<p align = "justify">Neste exemplo, a função <code>sampling_algorithm_structural_analysis</code> será utilizada para determinar a probabilidade de falha e o índice de confiabilidade de uma viga metálica bi-apoiada, apresentada no Exemplo 5.1 da obra *Reliability of Structures*, de Andrzej S. Nowak e Kevin R. Collins. Os dados do exemplo estão disponíveis abaixo:
+
+Variáveis aleatórias:
+
+1. Carga distribuiída *w*: 
+- Valor da carga: 0.25 k/in;
+- Fator bias: 1.0
+- Distribuição Normal;
+- Desvio-padrão: 0.025 k/in.
+
+2. Carga concentrada *P*:
+- Valor da carga: 12.0 k;
+- Fator bias: 0.85;
+- Distribuição Normal;
+- Desvio-padrão: 1.12 k.
+
+3. Resistência do aço *fy*:
+- Valor: 36 ksi;
+- Fator bias: 1.12;
+- Distribuição Normal;
+- Desvio-padrão: 4.64 ksi.
+
+Variáveis determinísticas:
+
+1. Comprimento da viga *L*: 18 ft
+2. Módulo plástico da viga *Z*: 80 in³
+
+<p align = "center"><b>Figure 3.</b> Viga exemplo.</p>
+<center><img src="assets/images/viga_ex.png" width="70%"></center>
+
+</p>
+
+```python
+from parepy_toolbox import sampling_algorithm_structural_analysis
+
+
+# Settings
+f_y = ['normal', 36 * 1.12, 4.64, 1, None]
+p_load = ['normal', 12 * 0.85, 1.12, 5, None]
+w_load = ['normal', 0.25 * 1.0, 0.025, 5, None]
+variables = [f_y, p_load, w_load]
+
+# Função objetivo
+def nowak_example(x, none_variable):
+    # Time id and value
+    id_analysis = int(x[-1])
+    time_step = none_variable['time analysis']
+    t_i = time_step[id_analysis]
+    f_y = x[0]
+    p_load = x[1]
+    w_load = x[2]
+    if t_i == 0:
+        degrad = 1
+    else:
+        degrad = 1 - (0.2/t_i)/100
+    capacity = 80*f_y*degrad
+    demand = 54*p_load + 5832*w_load
+    constraint = demand - capacity
+
+    return [capacity], [demand], [constraint]
+
+
+# PAREpy setup
+setup = {
+             'number of samples': 1000, 
+             'number of dimensions': len(variables), 
+             'numerical model': {'model sampling': 'mcs-time', 'time analysis': 5}, 
+             'variables settings': variables, 
+             'number of state limit functions or constraints': 1, 
+             'none variable': {'time analysis': list(np.linspace(1, 10, num=50, endpoint=True))},
+             'objective function': nowak_example,
+             'type process': 'serial',
+             'name simulation': 'documentation_example',
+        }
+
+
+results, pf, beta = sampling_algorithm_structural_analysis(setup)
+```
+
+```bash
+pf: 
+
+[[0.002, 0.002, 0.002, 0.003, 0.003]]
+
+beta:
+
+[[2.878161739095443,
+  2.878161739095443,
+  2.878161739095443,
+  2.7477813854449726,
+  2.7477813854449726]]
+```
