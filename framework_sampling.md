@@ -409,7 +409,7 @@ HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
 Example 5
 {: .label .label-yellow }
 
-<p align = "justify">In the context of Monte Carlo Sampling (MCS), now the task involves simultaneously generating samples for two variables: one following a normal distribution and the other a maximum Gumbel distribution. Employing the <code>sampling</code> function, the first variable, characterized by a normal distribution, is assigned parameters such as mean (e.g., 10) and standard deviation (e.g., 2). Simultaneously, for the second variable, governed by a maximum Gumbel distribution, the sampling function utilizes assigned parameters like mean (e.g., 5) and standard deviation (e.g., 2). </p>
+<p align = "justify">In the context of Monte Carlo Sampling (MCS), now the task involves simultaneously generating samples for two variables: one following a normal distribution and the other a maximum Gumbel distribution. Employing the <code>sampling</code> function, the first variable, characterized by a normal distribution, is assigned parameters such as mean (e.g., 10) and standard deviation (e.g., 2). Simultaneously, for the second variable, governed by a Gumbel maximum distribution, the sampling function utilizes assigned parameters like mean (e.g., 5) and standard deviation (e.g., 2). </p>
 
 
 ```python
@@ -452,8 +452,8 @@ Example 6
 In this specific example, the sampling function will be applied to generate three sets of samples, each following distinct parameters:
 
 1. Samples 'x': Normal distribution, with mean 10, standard deviation 2, and 5 steps.
-2. Samples 'y': Maximum Gumbel distribution, with mean 5, standard deviation 2, and 5 steps.
-3. Samples 'z': Minimum Gumbel distribution, with mean 3, standard deviation 0.5, and 1 step. 
+2. Samples 'y': Gumbel Maximum distribution, with mean 5, standard deviation 2, and 5 steps.
+3. Samples 'z': Gumbel Minimum distribution, with mean 3, standard deviation 0.5, and 1 step. 
 
 The analysis will now be conducted using the 'MCS-TIME' method </p>
 
@@ -471,7 +471,7 @@ vars_set = [x, y, z]
 model = {'model sampling': 'mcs-time', 'time analysis': 5}
 
 # Call function
-random_set = sampling(n_samples=10, d=len(vars_set), model=model, variables_setup=vars_set)
+random_set = sampling(n_samples=5, d=len(vars_set), model=model, variables_setup=vars_set)
 
 # Output details
 print('random variables: \n\n', random_set)
