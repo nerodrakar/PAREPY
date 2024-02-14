@@ -198,7 +198,7 @@ random variables:
 Example 2
 {: .label .label-blue }
 
-<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean\(\mu = 3\) and standard deviation\(\sigma = 1\).</p>
+<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean (\mu = 3\) and standard deviation\(\sigma = 1\).</p>
 
 ```python
 from parepy_toolbox import sampling
