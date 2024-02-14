@@ -409,23 +409,41 @@ HISTOGRAM_CHART(DATASET = DATA, PLOT_SETUP = CHART_CONFIG)
 Example 5
 {: .label .label-yellow }
 
-<p align = "justify">In the context of Monte Carlo Sampling (MCS), the task involves simultaneously generating samples for two variables: one following a normal distribution and the other a maximum Gumbel distribution. Employing the sampling function, the first variable, characterized by a normal distribution, is assigned parameters such as mean (e.g., 10) and standard deviation (e.g., 2). Simultaneously, for the second variable, governed by a maximum Gumbel distribution, the sampling function utilizes assigned parameters like mean (e.g., 5) and standard deviation (e.g., 2). The mean and standard deviation for the normal distribution play crucial roles in shaping the characteristics of the jointly generated samples. Ensuring a sufficient number of samples for statistically meaningful results, the outcomes derived from MCS will be scrutinized for their reliability in statistical analysis.</p>
+<p align = "justify">In the context of Monte Carlo Sampling (MCS), now the task involves simultaneously generating samples for two variables: one following a normal distribution and the other a maximum Gumbel distribution. Employing the sampling function, the first variable, characterized by a normal distribution, is assigned parameters such as mean (e.g., 10) and standard deviation (e.g., 2). Simultaneously, for the second variable, governed by a maximum Gumbel distribution, the sampling function utilizes assigned parameters like mean (e.g., 5) and standard deviation (e.g., 2). </p>
 
 
 ```python
-pip install PARE-TOOLBOX
-from PARE_TOOLBOX import *
-import numpy as np
-import pandas as pd
+from parepy_toolbox import sampling
 
 
-N_POP = 10
-DEAD_LOAD = ['NORMAL', 7.64, 7.64 * 0.1, 5, None]
-LIVE_LOAD = ['LOGNORMAL', 0.431, 0.259, 1, None]
-VARS = [DEAD_LOAD, LIVE_LOAD]
-numerical_model = {'model sampling': 'mcs-time', 'time analysis': 5}
+# Dataset
+x = ['normal', 10, 2, None]
+y = ['gumbel max', 5, 2, None]
+vars_set = [x, y]
+model = {'model sampling': 'mcs'}
 
-RESULTS = parepyco.sampling(n_samples=N_POP, d=len(VARS), model=numerical_model, variables_setup=VARS)
+# Call function
+random_set = sampling(n_samples=10, d=len(vars_set), model=model, variables_setup=vars_set)
+
+# Output details
+print('random variables: \n\n', random_set)
+```
+
+```bash
+random variables: 
+
+[[8.71137257,  6.41072588],
+[10.19364834,  5.2150337 ],
+[13.46151182,  3.64925352],
+[ 9.14910412,  6.3833308 ],
+[11.21876349,  6.36588657],
+[ 9.01389689,  4.2128289 ],
+[ 6.82816006,  5.6768629 ],
+[13.29995338,  4.46491872],
+[ 9.50016773,  5.93381128],
+[ 9.89851676,  8.45992549]]
+```
+
 
 
 [Notebook example](https://mega.nz/file/31FFDIAZ#zVEB5y81VjlbIazIijpgqzTFTxLtmqJVpnA6QAF7vjA){: .btn .btn-outline }
