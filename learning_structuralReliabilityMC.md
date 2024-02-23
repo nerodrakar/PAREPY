@@ -2,7 +2,7 @@
 layout: home
 grand_parent: Learning
 parent: Structural Reliability
-nav_order: 1
+nav_order: 3
 has_children: false
 has_toc: false
 title: Sampling methods
