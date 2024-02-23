@@ -12,13 +12,17 @@ title: sampling
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete ths script-->
 
+<h3>sampling</h3>
+
+<br>
+
+<p align = "justify">
+    This algorithm generates a set of random numbers according to a type of distribution.
+</p>
+
 ```python
 random_sampling = sampling(n_samples, d, model, variables_setup)
 ```
-
-<p align = "justify">
-This algorithm generates a set of random numbers according to a type of distribution.
-</p>
 
 Input variables
 {: .label .label-yellow }
@@ -58,12 +62,12 @@ Input variables
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[1]</code> \(=\) Mean of the distribution</td>
+        <td>index <code>[1]</code> \(=\) loc of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
         <td></td>
-        <td>index <code>[2]</code> \(=\) Standard deviation of the distribution</td>
+        <td>index <code>[2]</code> \(=\) scale of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
@@ -106,40 +110,42 @@ When it is necessary to generate a sample for time series, use the input present
         <td>Py list</td>
     </tr>
     <tr>
-        <td>index <code>[0]</code></td>
-        <td>Type of distribution</td>
+        <td></td>
+        <td>index <code>[0]</code> \(=\) Type of distribution</td>
         <td>String</td>
     </tr>
     <tr>
-        <td>index <code>[1]</code></td>
-        <td>Mean of the distribution</td>
+        <td></td>
+        <td>index <code>[1]</code> \(=\) loc of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
-        <td>index <code>[2]</code></td>
-        <td>Standard deviation of the distribution</td>
+        <td></td>
+        <td>index <code>[2]</code> \(=\) scale of the distribution</td>
         <td>Float</td>
     </tr>
     <tr>
-        <td>index <code>[3]</code></td>
-        <td>Number of time steps in temporal analysis</td>
+        <td></td>
+        <td>index <code>[3]</code> \(=\) Number of time steps in temporal analysis</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td>index <code>[4]</code></td>
-        <td>Seeds used in the random sampling</td>
-        <td>Integer</td>
+        <td></td>
+        <td>index <code>[4]</code> \(=\) Seeds used in the random sampling</td>
+        <td>Integer or None</td>
     </tr>
 </table>
 
 <p align = "justify">
-The list of distributions used in <code>type_dist</code> are:
+    The list of distributions used in <code>type_dist</code> are:
 </p>
+
 <ul>
-<li>Normal or Gaussian = <code>"gaussian"</code> or <code>"normal"</code>;</li>  
-<li>Gumbel Maximum = <code>"gumbel max"</code>; </li> 
-<li>Gumbel Minimum = <code>"gumbel min"</code>;</li>    
-<li>Log Normal = <code>"lognormal"</code>;</li>
+    <li>Normal or Gaussian = <code>"gaussian"</code> or <code>"normal"</code>;</li>  
+    <li>Gumbel Maximum = <code>"gumbel max"</code>; </li> 
+    <li>Gumbel Minimum = <code>"gumbel min"</code>;</li>    
+    <li>Log Normal = <code>"lognormal"</code>;</li>
+    <li>Weibull = <code>"weibull"</code>;</li>
 </ul>
 
 Output variables
@@ -163,7 +169,9 @@ Output variables
 Example 1
 {: .label .label-blue }
 
-<p align = "justify"><i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=10)\) following a Normal distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\).</i></p>
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=10)\) following a Normal distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+</p>
 
 ```python
 from parepy_toolbox import sampling
@@ -183,22 +191,24 @@ print('random variables: \n\n', random_set)
 ```bash
 random variables: 
 
- [[4.83211826]
- [2.54537651]
- [2.98509002]
- [3.92658834]
- [4.94070085]
- [4.66545679]
- [3.69488262]
- [3.0909251 ]
- [4.10526687]
- [4.2336168 ]]
+[[4.83211826]
+[2.54537651]
+[2.98509002]
+[3.92658834]
+[4.94070085]
+[4.66545679]
+[3.69488262]
+[3.0909251 ]
+[4.10526687]
+[4.2336168 ]]
 ```
 
 Example 2
 {: .label .label-blue }
 
-<p align = "justify">In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean (\mu = 3\) and standard deviation\(\sigma = 1\).</p>
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \(n=10)\ following a Normal distribution with mean (\mu = 3\) and standard deviation\(\sigma = 1\). Use "seed without control" in your setup.</i>
+</p>
 
 ```python
 from parepy_toolbox import sampling
@@ -218,16 +228,16 @@ print('random variables: \n\n', random_set)
 ```bash
 random variables: 
 
- [[4.83211826]
- [2.54537651]
- [2.98509002]
- [3.92658834]
- [4.94070085]
- [4.66545679]
- [3.69488262]
- [3.0909251 ]
- [4.10526687]
- [4.2336168 ]]
+[[4.83211826]
+[2.54537651]
+[2.98509002]
+[3.92658834]
+[4.94070085]
+[4.66545679]
+[3.69488262]
+[3.0909251 ]
+[4.10526687]
+[4.2336168 ]]
 ```
 
 <p align = "center"><b>Figure 1.</b> Normal distribution using Sampling function.</p>
