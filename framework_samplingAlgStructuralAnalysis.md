@@ -158,7 +158,7 @@ The algorithm runs ten times the objective function and chooses the method proce
 Example 1
 {: .label .label-yellow }
 
-<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(P\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress (\(f_y\)), are random quantities; the lenght \(L\) and plastic section modulus \(Z\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>.
+<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(P\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress (\(f_y\)), are random quantities; the lenght \(L=18 ft\) and plastic section modulus \(Z=80 in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Use serial architecture and 500.000 samples to solve this example.</p>
 
 <table style = "width:100%">
    <thead>
@@ -187,93 +187,102 @@ Example 1
 
 <p align = "center"><b>Table 1.</b> Random variables.</p>
 
-1. Carga distribuiída *w*: 
-- Valor da carga: 0.25 k/in;
-- Fator bias: 1.0
-- Distribuição Normal;
-- Desvio-padrão: 0.025 k/in.
+```python
+from parepy_toolbox import sampling_algorithm_structural_analysis
 
-2. Carga concentrada *P*:
-- Valor da carga: 12.0 k;
-- Fator bias: 0.85;
-- Distribuição Normal;
-- Desvio-padrão: 1.12 k.
+# Dataset
+f = {'type': 'normal', 'loc': 40.3, 'scale': 4.64, 'seed': None}
+p = {'type': 'normal', 'loc': 10.2, 'scale': 1.12, 'seed': None}
+w = {'type': 'normal', 'loc': 0.25, 'scale': 0.025, 'seed': None}
+vars = [f, p, w]
 
-3. Resistência do aço *fy*:
-- Valor: 36 ksi;
-- Fator bias: 1.12;
-- Distribuição Normal;
-- Desvio-padrão: 4.64 ksi.
+# PAREpy setup
+setup = {
+             'number of samples': 500000, 
+             'number of dimensions': len(vars), 
+             'numerical model': {'model sampling': 'mcs'}, 
+             'variables settings': vars, 
+             'number of state limit functions or constraints': 1, 
+             'none variable': None,
+             'objective function': nowak_example,
+             'type process': 'serial',
+             'name simulation': 'nowak_example',
+        }
 
-Variáveis determinísticas:
+# Call algorithm
+results, pf, beta = sampling_algorithm_structural_analysis(setup)
 
-1. Comprimento da viga *L*: 18 ft
-2. Módulo plástico da viga *Z*: 80 in³
+# Output details
+print('Beta index: ', beta[0][0])
+```
 
-<p align = "center"><b>Figure 3.</b> Viga exemplo.</p>
-<center><img src="assets/images/viga_ex.png" width="70%"></center>
+```bash
+Beta index:  3.0123892463595308
+```
 
-</p>
+Example 2
+{: .label .label-yellow }
+
+<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(P\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress (\(f_y\)), are random quantities; the lenght \(L=18 ft\) and plastic section modulus \(Z=80 in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Use serial architecture and 500.000 samples to solve this example.</p>
+
+<table style = "width:100%">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Mean</th>
+       <th>Standard Deviation</th>
+     </tr>
+   </thead>
+   <tr>
+       <td>Yield stress \(f_y\)</td>
+       <td>40.3 \(ksi\)</td>
+       <td>4.64 \(ksi\)</td>
+   </tr>
+   <tr>
+       <td>Concentrated live load \(P\)</td>
+       <td>10.2 \(kip\)</td>
+       <td>1.12 \(kip\)</td>
+   </tr>
+   <tr>
+       <td>Uniformly distributed dead load \(w\)</td>
+       <td>0.25 \(kip/in\)</td>
+       <td>0.025 \(kip/in\)</td>
+   </tr>
+</table>
+
+<p align = "center"><b>Table 1.</b> Random variables.</p>
 
 ```python
 from parepy_toolbox import sampling_algorithm_structural_analysis
 
-
-# Settings
-f_y = ['normal', 36 * 1.12, 4.64, 1, None]
-p_load = ['normal', 12 * 0.85, 1.12, 5, None]
-w_load = ['normal', 0.25 * 1.0, 0.025, 5, None]
-variables = [f_y, p_load, w_load]
-
-# Função objetivo
-def nowak_example(x, none_variable):
-    # Time id and value
-    id_analysis = int(x[-1])
-    time_step = none_variable['time analysis']
-    t_i = time_step[id_analysis]
-    f_y = x[0]
-    p_load = x[1]
-    w_load = x[2]
-    if t_i == 0:
-        degrad = 1
-    else:
-        degrad = 1 - (0.2/t_i)/100
-    capacity = 80*f_y*degrad
-    demand = 54*p_load + 5832*w_load
-    constraint = demand - capacity
-
-    return [capacity], [demand], [constraint]
-
+# Dataset
+f = {'type': 'normal', 'loc': 40.3, 'scale': 4.64, 'seed': None}
+p = {'type': 'normal', 'loc': 10.2, 'scale': 1.12, 'seed': None}
+w = {'type': 'normal', 'loc': 0.25, 'scale': 0.025, 'seed': None}
+vars = [f, p, w]
 
 # PAREpy setup
 setup = {
-             'number of samples': 1000, 
-             'number of dimensions': len(variables), 
-             'numerical model': {'model sampling': 'mcs-time', 'time analysis': 5}, 
-             'variables settings': variables, 
+             'number of samples': 500000, 
+             'number of dimensions': len(vars), 
+             'numerical model': {'model sampling': 'mcs'}, 
+             'variables settings': vars, 
              'number of state limit functions or constraints': 1, 
-             'none variable': {'time analysis': list(np.linspace(1, 10, num=50, endpoint=True))},
+             'none variable': None,
              'objective function': nowak_example,
              'type process': 'serial',
-             'name simulation': 'documentation_example',
+             'name simulation': 'nowak_example',
         }
 
-
+# Call algorithm
 results, pf, beta = sampling_algorithm_structural_analysis(setup)
+
+# Output details
+print('Beta index: ', beta[0][0])
 ```
 
 ```bash
-pf: 
-
-[[0.002, 0.002, 0.002, 0.003, 0.003]]
-
-beta:
-
-[[2.878161739095443,
-  2.878161739095443,
-  2.878161739095443,
-  2.7477813854449726,
-  2.7477813854449726]]
+Beta index:  3.0123892463595308
 ```
 
 <h3>Reference list</h3>
