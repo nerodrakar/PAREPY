@@ -12,15 +12,16 @@ title: sampling_algorithm_structural_analysis
 <script id = "MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!--Don't delete ths script-->
 
-SAMPLING ALGORITHM
-{: .label .label-green }
+<h3>sampling_algorithm_structural_analysis</h3>
+
+<br>
 
 ```python
 df_results, pf, beta = sampling_algorithm_structural_analysis(setup)
 ```
 
 <p align = "justify">
-This function creates the samples and evaluates the limit state functions.
+    This function creates the samples and evaluates the limit state functions in structural reliability problems.
 </p>
 
 Input variables
@@ -36,8 +37,8 @@ Input variables
     </thead>
     <tr>
         <td><code>setup</code></td>
-        <td>Setup setting.</td>
-        <td>Py dict</td>
+        <td>algorithms settings</td>
+        <td>Dictionary</td>
     </tr>
     <tr>
         <td><code>setup</code> keys</td>
@@ -45,29 +46,24 @@ Input variables
         <td></td>
     </tr>
     <tr>
-        <td><code>'Objective function'</code></td>
-        <td>Objective function.</td>
-        <td>String</td>
-    </tr>
-    <tr>
         <td><code>'Number of samples'</code></td>
-        <td>Number of samples.</td>
+        <td>Number of samples</td>
         <td>Integer</td>
     </tr>
     <tr>
         <td><code>'Dimension'</code></td>
-        <td>Number of dimensions.</td>
+        <td>Number of dimensions</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>'Numerical model'</code></td>
-        <td>Numerical model settings.</td>
-        <td>Py dict</td>
+        <td><code>model</code></td>
+        <td><a href="#mode">Model parameters</a></td>
+        <td>Dictionary</td>
     </tr>
     <tr>
-        <td><code>'Variables settings'</code></td>
-        <td>Variables settings.</td>
-        <td>Py list</td>
+        <td><code>variables_setup</code></td>
+        <td><a href="#vars">Variables parameters</a></td>
+        <td>List</td>
     </tr>
     <tr>
         <td><code>'Number of state limit functions or constraints'</code></td>
@@ -76,8 +72,23 @@ Input variables
     </tr>
     <tr>
         <td><code>'none_variable'</code></td>
-        <td>Null dictionary.</td>
-        <td>Py dict</td>
+        <td>None variable. Default is <code>None</code>. Use in objective function</td>
+        <td>None, list, float, dictionary, str or any</td>
+    </tr>
+    <tr>
+        <td><code>'Objective function'</code></td>
+        <td>Objective function</td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>'type process'</code></td>
+        <td><a href="#vars">Architecture of algorithm</a></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>'name simulation'</code></td>
+        <td>Output filename</td>
+        <td>String</td>
     </tr>
 </table>
 
