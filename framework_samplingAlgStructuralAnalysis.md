@@ -57,12 +57,12 @@ Input variables
     </tr>
     <tr>
         <td><code>model</code></td>
-        <td><a href="#mode">Model parameters</a></td>
+        <td><a href="https://wmpjrufg.github.io/PAREPY/framework_sampling#mode" target="_blank" rel="noopener noreferrer">Model parameters</a></td>
         <td>Dictionary</td>
     </tr>
     <tr>
         <td><code>variables_setup</code></td>
-        <td><a href="#vars">Variables parameters</a></td>
+        <td><a href="https://wmpjrufg.github.io/PAREPY/framework_sampling#vars" target="_blank" rel="noopener noreferrer">Variables parameters</a></td>
         <td>List</td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ Input variables
     </tr>
     <tr>
         <td><code>'type process'</code></td>
-        <td><a href="#vars">Architecture of algorithm</a></td>
+        <td><a href="#arch">Architecture of algorithm</a></td>
         <td>String</td>
     </tr>
     <tr>
@@ -120,12 +120,72 @@ Output variables
    </tr>
 </table>
 
+
+<p align = "justify" id = "arch">
+    See examples of Architecture of algorithm.
+</p>
+
+<h4><i>Serial process</i></h4>
+
+<p align = "justify" id = "arch">
+Serial memory processing is attending to and processing one item at a time.
+</p>
+
+```python
+'type process': 'serial'
+```
+
+<h4><i>Parallel process</i></h4>
+
+<p align = "justify" id = "arch">
+Parallel memory processing is the act of attending to and processing all items simultaneously.
+</p>
+
+```python
+'type process': 'parallel'
+```
+
+<h4><i>Automatic process</i></h4>
+
+<p align = "justify" id = "arch">
+The algorithm runs ten times the objective function and chooses the method process to spend the minimum amount of time.
+</p>
+
+```python
+'type process': 'auto'
+```
+
 Example 1
 {: .label .label-yellow }
 
-<p align = "justify">Neste exemplo, a função <code>sampling_algorithm_structural_analysis</code> será utilizada para determinar a probabilidade de falha e o índice de confiabilidade de uma viga metálica bi-apoiada, apresentada no Exemplo 5.1 da obra *Reliability of Structures*, de Andrzej S. Nowak e Kevin R. Collins. Os dados do exemplo estão disponíveis abaixo:
+<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(P\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress (\(f_y\)), are random quantities; the lenght \(L\) and plastic section modulus \(Z\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>.
 
-Variáveis aleatórias:
+<table style = "width:100%">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Mean</th>
+       <th>Standard Deviation</th>
+     </tr>
+   </thead>
+   <tr>
+       <td>Yield stress \(f_y\)</td>
+       <td>40.3 \(ksi\)</td>
+       <td>4.64 \(ksi\)</td>
+   </tr>
+   <tr>
+       <td>Concentrated live load \(P\)</td>
+       <td>10.2 \(kip\)</td>
+       <td>1.12 \(kip\)</td>
+   </tr>
+   <tr>
+       <td>Uniformly distributed dead load \(w\)</td>
+       <td>0.25 \(kip/in\)</td>
+       <td>0.025 \(kip/in\)</td>
+   </tr>
+</table>
+
+<p align = "center"><b>Table 1.</b> Random variables.</p>
 
 1. Carga distribuiída *w*: 
 - Valor da carga: 0.25 k/in;
@@ -215,3 +275,23 @@ beta:
   2.7477813854449726,
   2.7477813854449726]]
 ```
+
+<h3>Reference list</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Reference</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><p align = "center" id = "ref1">[1]</p></td>
+            <td><p align = "left"><a href="https://www.amazon.com.br/Reliability-Structures-Second-Andrzej-Nowak/dp/0415675758" target="_blank" rel="noopener noreferrer">Andrzej S. Nowak e Kevin R. Collins (2012). Reliability of Structures, Second Edition. CRC Press.</a></p></td>
+        </tr>
+    </tbody>
+</table>
+
+
+

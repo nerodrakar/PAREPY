@@ -127,7 +127,7 @@ Output variables
 </table>
 
 
-<p align = "justify" id = "mode">
+<p align = "justify" id = "vars">
     See examples of variables parameters.
 </p>
 
