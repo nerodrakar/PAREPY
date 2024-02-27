@@ -106,17 +106,17 @@ Output variables
    <tr>
        <td><code>results_about_data</code></td>
        <td>Results about data.</td>
-       <td>Np array</td>
+       <td>Dataframe</td>
    </tr>
     <tr>
        <td><code>failure_prob_list</code></td>
        <td>Failure probability list</td>
-       <td>Py list</td>
+       <td>List</td>
    </tr>
     <tr>
        <td><code>beta_list</code></td>
        <td>Beta list</td>
-       <td>Py list</td>
+       <td>List</td>
    </tr>
 </table>
 
