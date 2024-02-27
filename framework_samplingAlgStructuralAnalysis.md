@@ -156,7 +156,7 @@ The algorithm runs ten times the objective function and chooses the method proce
 ```
 
 Example 1
-{: .label .label-yellow }
+{: .label .label-blue }
 
 <p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(\left(P\right)\) and a uniformly distributed dead load \(\left(w\right)\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress \(\left(f_y\right)\), are random quantities; the lenght \(L=18\;ft\) and plastic section modulus \(Z=80\;in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Using Crude Monte Carlo method determine the value of \(\beta\) index. Use serial architecture and 500.000 samples to solve this example.</p>
 
@@ -224,7 +224,7 @@ Beta index:  3.0123892463595308
 > As a result, the first id in the list indicates the id of the state limit function. The second id in the results indicates the outcome of the reliability process. In stochastic analysis, the list is formed by sequence results in each time step. See the second example following.
 
 Example 2
-{: .label .label-yellow }
+{: .label .label-blue }
 
 <p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(\left(P\right)\) and a uniformly distributed dead load \(\left(w\right)\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress \(\left(f_y\right)\), are random quantities; the lenght \(L=18\;ft\) and plastic section modulus \(Z=80\;in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Using Crude Monte Carlo method determine the value of \(\beta\) index. Use serial architecture and 500.000 samples to solve this example.</p>
 
