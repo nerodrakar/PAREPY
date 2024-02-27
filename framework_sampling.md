@@ -120,7 +120,7 @@ Output variables
         <td>String</td>
     </tr>
     <tr>
-        <td><code>'time anilysis'</code></td>
+        <td><code>'time analysis'</code></td>
         <td>Number of time steps used in times series analysis</td>
         <td>Integer</td>
     </tr>

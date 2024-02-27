@@ -158,7 +158,7 @@ The algorithm runs ten times the objective function and chooses the method proce
 Example 1
 {: .label .label-yellow }
 
-<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(P\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress (\(f_y\)), are random quantities; the lenght \(L=18 ft\) and plastic section modulus \(Z=80 in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Use serial architecture and 500.000 samples to solve this example.</p>
+<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(\left(P\right)\) and a uniformly distributed dead load \(\left(w\right)\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress \(\left(f_y\right)\), are random quantities; the lenght \(L=18\;ft\) and plastic section modulus \(Z=80\;in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Using Crude Monte Carlo method determine the value of \(\beta\) index. Use serial architecture and 500.000 samples to solve this example.</p>
 
 <table style = "width:100%">
    <thead>
@@ -169,17 +169,17 @@ Example 1
      </tr>
    </thead>
    <tr>
-       <td>Yield stress \(f_y\)</td>
+       <td>Yield stress \(\left(f_y\right)\)</td>
        <td>40.3 \(ksi\)</td>
        <td>4.64 \(ksi\)</td>
    </tr>
    <tr>
-       <td>Concentrated live load \(P\)</td>
+       <td>Concentrated live load \(\left(P\right)\)</td>
        <td>10.2 \(kip\)</td>
        <td>1.12 \(kip\)</td>
    </tr>
    <tr>
-       <td>Uniformly distributed dead load \(w\)</td>
+       <td>Uniformly distributed dead load \(\left(w\right)\)</td>
        <td>0.25 \(kip/in\)</td>
        <td>0.025 \(kip/in\)</td>
    </tr>
@@ -220,10 +220,13 @@ print('Beta index: ', beta[0][0])
 Beta index:  3.0123892463595308
 ```
 
+{: .warning }
+> As a result, the first id in the list indicates the id of the state limit function. The second id in the results indicates the outcome of the reliability process. In stochastic analysis, the list is formed by sequence results in each time step. See the second example following.
+
 Example 2
 {: .label .label-yellow }
 
-<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(P\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress (\(f_y\)), are random quantities; the lenght \(L=18 ft\) and plastic section modulus \(Z=80 in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Use serial architecture and 500.000 samples to solve this example.</p>
+<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(\left(P\right)\) and a uniformly distributed dead load \(\left(w\right)\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress \(\left(f_y\right)\), are random quantities; the lenght \(L=18\;ft\) and plastic section modulus \(Z=80\;in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Using Crude Monte Carlo method determine the value of \(\beta\) index. Use serial architecture and 500.000 samples to solve this example.</p>
 
 <table style = "width:100%">
    <thead>
@@ -234,17 +237,17 @@ Example 2
      </tr>
    </thead>
    <tr>
-       <td>Yield stress \(f_y\)</td>
+       <td>Yield stress \(\left(f_y\right)\)</td>
        <td>40.3 \(ksi\)</td>
        <td>4.64 \(ksi\)</td>
    </tr>
    <tr>
-       <td>Concentrated live load \(P\)</td>
+       <td>Concentrated live load \(\left(P\right)\)</td>
        <td>10.2 \(kip\)</td>
        <td>1.12 \(kip\)</td>
    </tr>
    <tr>
-       <td>Uniformly distributed dead load \(w\)</td>
+       <td>Uniformly distributed dead load \(\left(w\right)\)</td>
        <td>0.25 \(kip/in\)</td>
        <td>0.025 \(kip/in\)</td>
    </tr>
