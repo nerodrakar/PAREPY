@@ -105,17 +105,17 @@ Output variables
    </thead>
    <tr>
        <td><code>results_about_data</code></td>
-       <td>Results about data.</td>
+       <td><a href="#results">Results about reliability analysis</a></td>
        <td>Dataframe</td>
    </tr>
     <tr>
        <td><code>failure_prob_list</code></td>
-       <td>Failure probability list</td>
+       <td><a href="#results">Failure probability list</a></td>
        <td>List</td>
    </tr>
     <tr>
        <td><code>beta_list</code></td>
-       <td>Beta list</td>
+       <td><a href="#results">Beta list</a></td>
        <td>List</td>
    </tr>
 </table>
@@ -154,6 +154,9 @@ The algorithm runs ten times the objective function and chooses the method proce
 ```python
 'type process': 'auto'
 ```
+
+<h4><i><p align = "justify" id = "results">Results in PAREpy Framework</p></i></h4>
+
 
 Example 1
 {: .label .label-blue }
