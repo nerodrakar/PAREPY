@@ -202,5 +202,134 @@ random variables n=1000:
  type variable: <class 'numpy.ndarray'>
 ```
 
-<p align = "center"><b>Figure 3.</b> Gumbel Distribution using Sampling function.</p>
+<p align = "center"><b>Figure 1.</b> Normal Distribution using Sampling function.</p>
+<center><img src="assets/images/normal_distribution.svg" width="70%"></center>
+
+Example 2
+{: .label .label-blue }
+
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Gumbel Max distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+model = {'model sampling': 'mcs'}
+f = {'type': 'gumbel max', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+varSet = [f]
+
+# Call function
+randomVariables = sampling(1000, len(varSet), model, varSet)
+
+# Output details
+print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n type variable: {type(randomVariables)}')
+```
+
+```bash
+random variables n=1000: 
+
+ [[2.54344536]
+ [3.4132256 ]
+ [2.07157173]
+ [3.17322365]
+ [5.08129471]
+ [4.8650879 ]
+ [3.12570801]
+ [3.07478402]
+...
+ [4.24404437]
+ [6.77645712]]
+
+ type variable: <class 'numpy.ndarray'>
+```
+
+<p align = "center"><b>Figure 2.</b> Gumbel Max Distribution using Sampling function.</p>
+<center><img src="assets/images/gumbelmax_distribution.svg" width="70%"></center>
+
+Example 3
+{: .label .label-blue }
+
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Gumbel Min distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+model = {'model sampling': 'mcs'}
+f = {'type': 'gumbel min', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+varSet = [f]
+
+# Call function
+randomVariables = sampling(1000, len(varSet), model, varSet)
+
+# Output details
+print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n type variable: {type(randomVariables)}')
+```
+
+```bash
+random variables n=1000: 
+
+ [[ 3.54288578e+00]
+ [ 1.31047287e+00]
+ [ 1.58150807e+00]
+ [ 2.58028790e+00]
+ [ 2.12311530e+00]
+ [ 3.10283340e+00]
+ [ 1.04313183e+00]
+ [ 7.91284471e-01]
+...
+ [ 3.48637502e+00]
+ [ 2.03970523e+00]]
+
+ type variable: <class 'numpy.ndarray'>
+```
+
+<p align = "center"><b>Figure 3.</b> Gumbel Min Distribution using Sampling function.</p>
+<center><img src="assets/images/lognormal_distribution.png" width="70%"></center>
+
+Example 4
+{: .label .label-blue }
+
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Weibull distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+model = {'model sampling': 'mcs'}
+f = {'type': 'weibull', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+varSet = [f]
+
+# Call function
+randomVariables = sampling(1000, len(varSet), model, varSet)
+
+# Output details
+print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n type variable: {type(randomVariables)}')
+```
+
+```bash
+random variables n=1000: 
+
+ [[ 3.54288578e+00]
+ [ 1.31047287e+00]
+ [ 1.58150807e+00]
+ [ 2.58028790e+00]
+ [ 2.12311530e+00]
+ [ 3.10283340e+00]
+ [ 1.04313183e+00]
+ [ 7.91284471e-01]
+...
+ [ 3.48637502e+00]
+ [ 2.03970523e+00]]
+
+ type variable: <class 'numpy.ndarray'>
+```
+
+<p align = "center"><b>Figure 3.</b> Gumbel Min Distribution using Sampling function.</p>
 <center><img src="assets/images/lognormal_distribution.png" width="70%"></center>
