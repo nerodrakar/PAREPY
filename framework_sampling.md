@@ -332,4 +332,4 @@ random variables n=1000:
 ```
 
 <p align = "center"><b>Figure 3.</b> Gumbel Min Distribution using Sampling function.</p>
-<center><img src="assets/images/lognormal_distribution.png" width="70%"></center>
+<center><img src="assets/images/weibull_distribution.svg" width="70%"></center>
