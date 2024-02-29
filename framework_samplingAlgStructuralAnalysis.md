@@ -46,12 +46,12 @@ Input variables
         <td></td>
     </tr>
     <tr>
-        <td><code>'Number of samples'</code></td>
+        <td><code>'number of samples'</code></td>
         <td>Number of samples</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>'Dimension'</code></td>
+        <td><code>'dimension'</code></td>
         <td>Number of dimensions</td>
         <td>Integer</td>
     </tr>
@@ -66,7 +66,7 @@ Input variables
         <td>List</td>
     </tr>
     <tr>
-        <td><code>'Number of state limit functions or constraints'</code></td>
+        <td><code>'number of state limit functions or constraints'</code></td>
         <td>Number of state limit functions or constraints.</td>
         <td>Integer</td>
     </tr>
@@ -76,7 +76,7 @@ Input variables
         <td>None, list, float, dictionary, str or any</td>
     </tr>
     <tr>
-        <td><code>'Objective function'</code></td>
+        <td><code>'objective function'</code></td>
         <td>Objective function</td>
         <td>String</td>
     </tr>

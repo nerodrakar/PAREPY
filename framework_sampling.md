@@ -103,7 +103,7 @@ Output variables
 <h4><i>Crude Monte Carlo - Stochastic analysis</i></h4>
 
 ```python
-'numerical model': {'model sampling': 'mcs-time', 'time analysis': 5}
+'numerical model': {'model sampling': 'mcs-time', 'time steps': 5}
 ```
 
 <table style = "width:100%">
@@ -120,7 +120,7 @@ Output variables
         <td>String</td>
     </tr>
     <tr>
-        <td><code>'time analysis'</code></td>
+        <td><code>'time steps'</code></td>
         <td>Number of time steps used in times series analysis</td>
         <td>Integer</td>
     </tr>
@@ -153,12 +153,48 @@ Output variables
     <tr>
         <td><code>'scale'</code></td>
         <td>Standard deviation</td>
-        <td>float</td>
+        <td>Float</td>
     </tr>
     <tr>
         <td><code>'seed'</code></td>
         <td>Random seed. Use <code>None</code> for random seed</td>
-        <td>float</td>
+        <td>Float</td>
+    </tr>
+</table>
+
+<h4><i>Normal sampling in time series</i></h4>
+
+```python
+{'type': 'normal', 'loc': 40.3, 'scale': 4.64, 'stochastic variable': False, 'seed': None}
+```
+
+<table style = "width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+    </thead> 
+    <tr>
+        <td><code>'loc'</code></td>
+        <td>Mean</td>
+        <td>Float</td>
+    </tr>
+    <tr>
+        <td><code>'scale'</code></td>
+        <td>Standard deviation</td>
+        <td>Float</td>
+    </tr>
+    <tr>
+      <td><code>'seed'</code></td>
+      <td>Random seed. Use <code>None</code> for random seed</td>
+      <td>Integer</td>
+    </tr>
+    <tr>
+        <td><code>'stochastic variable'</code></td>
+        <td>This variable represents the behavior of the random variable over time intervals. <code>False</code> represents the variable with a fixed value at each time step, and <code>True</code> represents variable behavior at each time step</td>
+        <td>Boolean</td>
     </tr>
 </table>
 
