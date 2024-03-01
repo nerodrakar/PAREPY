@@ -1,11 +1,11 @@
 ---
 layout: home
 grand_parent: Learning
-parent: Structural Reliability
+parent: Statistical concepts
 nav_order: 3
 has_children: false
 has_toc: false
-title: Sampling methods
+title: Distributions
 ---
 
 <!--Don't delete this script-->
@@ -18,7 +18,7 @@ title: Sampling methods
 Gaussian or Normal
 {: .label .label-Blue}
 
-<p aling = "justify">
+<p align = "justify">
 The Gaussian or Normal distribution is by far one of the most important probability distributions in literature, and it is used in many fields of engineering and science due to its simplicity and convenience. This distribution is used to model the Poisson's ratio, among other material properties, for example <a href="#ref1">[1]</a>. It is possible to say that a random variable \(X\) has a Gaussian distribution if its probability density function follows the expression.
 </p>
 
@@ -31,13 +31,12 @@ The Gaussian or Normal distribution is by far one of the most important probabil
     </tr>
 </table>
 
-<p aling = "justify">
+<p align = "justify">
 Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(x\), respectively, and \(x\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in Figure 1.
-
+</p>
 
 <p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
 <center><img src="assets/images/Normal_Density_Function.png" width="50%"></center>
-
 </p>
 
 <br>
