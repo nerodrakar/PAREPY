@@ -26,7 +26,7 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ ch_{0,k} = 0.50 \cdot p_{1,k}^{t} + 0.50 \cdot p_{2,k}^{t}\]</td>
+        <td style="width: 90%;">\[ f_{x}(x)=\frac{1}{\sqrt{2\pi}\sigma}exp\left [ - \frac{1}{2}\left ( \frac{x-\mu}{\sigma} \right ) \right ] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
     </tr>
 </table>
