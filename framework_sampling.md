@@ -333,3 +333,46 @@ random variables n=1000:
 
 <p align = "center"><b>Figure 4.</b> Weibull Distribution using Sampling function.</p>
 <center><img src="assets/images/weibull_distribution.svg" width="70%"></center>
+
+Example 5
+{: .label .label-blue }
+
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Lognormal distribution with shape \(shape = 0.201674\), mean \(\mu = 23.39\) and standard deviation \(\sigma = 3.46\). Use "seed without control" in your setup.</i>
+</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+model = {'model sampling': 'mcs'}
+f = {'type': 'lognormal', 'shape': 0.201674, 'loc': 23.39, 'scale': 3.46, 'seed': None}
+varSet = [f]
+
+# Call function
+randomVariables = sampling(1000, len(varSet), model, varSet)
+
+# Output details
+print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n type variable: {type(randomVariables)}')
+```
+
+```bash
+random variables n=1000: 
+
+ [[26.51855105]
+ [26.36110399]
+ [25.45837593]
+ [25.04686538]
+ [27.07251459]
+ [26.31081944]
+ [27.84407454]
+ [27.08248368]
+...
+ [27.17634471]
+ [26.73573646]]
+
+ type variable: <class 'numpy.ndarray'>
+```
+
+<p align = "center"><b>Figure 5.</b> Lognormal Distribution using Sampling function.</p>
+<center><img src="assets/images/lognormal_distribution.svg" width="70%"></center>
