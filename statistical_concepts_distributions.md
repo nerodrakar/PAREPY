@@ -63,7 +63,7 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{x}(x)=\frac{1}{x\sqrt{2\pi}\xi}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\xi} \right ) \right ] \]</td>
+        <td style="width: 90%;">\[ f_{x}(x)=\frac{1}{x\sqrt{2\pi}\xi}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\xs} \right ) \right ] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
     </tr>
 </table>
