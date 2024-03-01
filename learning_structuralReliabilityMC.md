@@ -32,10 +32,10 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 </table>
 
 <p aling = "justify">
-Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(x\), respectively, and \(x\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in figure 1.
+Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(x\), respectively, and \(x\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in Figure 1.
 
 
-<p align = "center"><b>Figure 3.</b> Gumbel Distribution using Sampling function.</p>
+<p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
 <center><img src="assets/images/Normal Density Function.png" width="70%"></center>
 
 </p>
