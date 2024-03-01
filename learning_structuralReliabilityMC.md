@@ -32,7 +32,7 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 </table>
 
 <p aling = "justify">
-Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(x\), respectively, and \(x\) is identified as \(N(\mu,\simga)\). The location (\(\mu\)) and scale (\(\simga\)) parameters generate a family of distributions, as a presented in figure 1. 
+Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(x\), respectively, and \(x\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in figure 1. 
 </p>
 
 <br>
