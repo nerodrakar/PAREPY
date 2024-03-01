@@ -61,6 +61,13 @@ Suppose a sample of random variable \(X = x_{1},x_{2},x_{3}, ..., x_{n}\) and th
 Thus, it is possible to say that a random variable \(X\) has a lognormal distribution if its probability density function is characterized by Equation 5.
 </p>
 
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ f_{x}(x)=\frac{1}{x\sqrt{2\pi}\xi}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\xi} \right ) \right ] \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
+    </tr>
+</table>
+
 <br>
 
 
