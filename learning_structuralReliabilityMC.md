@@ -36,7 +36,7 @@ Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean 
 
 
 <p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
-<center><img src="assets/images/Normal Density Function.png" width="70%"></center>
+<center><img src="assets/images/Normal Density Function.png" width="50%"></center>
 
 </p>
 
