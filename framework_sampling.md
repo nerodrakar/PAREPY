@@ -295,7 +295,7 @@ Example 4
 {: .label .label-blue }
 
 <p align = "justify">
-    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Weibull distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Weibull distribution with shape \(shape = 1.17015\), mean \(\mu = 26.880557\) and standard deviation \(\sigma = 0.576488\). Use "seed without control" in your setup.</i>
 </p>
 
 ```python
@@ -303,7 +303,7 @@ from parepy_toolbox import sampling
 
 # Dataset
 model = {'model sampling': 'mcs'}
-f = {'type': 'weibull', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+f = {'type': 'weibull', 'shape': 1.17015, 'loc': 26.880557, 'scale': 0.576488, 'seed': None}
 varSet = [f]
 
 # Call function
@@ -316,20 +316,20 @@ print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n t
 ```bash
 random variables n=1000: 
 
- [[ 3.54288578e+00]
- [ 1.31047287e+00]
- [ 1.58150807e+00]
- [ 2.58028790e+00]
- [ 2.12311530e+00]
- [ 3.10283340e+00]
- [ 1.04313183e+00]
- [ 7.91284471e-01]
+ [[26.23607505]
+ [26.80557165]
+ [27.65502771]
+ [26.63109136]
+ [25.91253973]
+ [27.07699283]
+ [25.25182475]
+ [27.10024372]
 ...
- [ 3.48637502e+00]
- [ 2.03970523e+00]]
+ [25.92168856]
+ [27.3081249 ]]
 
  type variable: <class 'numpy.ndarray'>
 ```
 
-<p align = "center"><b>Figure 3.</b> Gumbel Min Distribution using Sampling function.</p>
+<p align = "center"><b>Figure 4.</b> Weibull Distribution using Sampling function.</p>
 <center><img src="assets/images/weibull_distribution.svg" width="70%"></center>
