@@ -31,6 +31,10 @@ The Gaussian or Normal distribution is by far one of the most important probabil
     </tr>
 </table>
 
+<p aling = "justify">
+Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(x\), respectively, and \(x\) is identified as \(N(\mu,\simga)\). The location (\(\mu\)) and scale (\(\simga\)) parameters generate a family of distributions, as a presented in figure 1. 
+</p>
+
 <br>
 
 
@@ -68,7 +72,7 @@ Uniform
     <tbody>
         <tr>
             <td><p align = "center" id = "ref1">[1]</p></td>
-            <td><p align = "left"><a href="https://doi.org/10.1007/s11042-020-10139-6" target="_blank" rel="noopener noreferrer">Katoch, S., Chauhan, S.S. & Kumar, V  (2021). A review on genetic algorithm: past, present, and future. Multimed Tools Appl 80, 8091–8126.</a></p></td>
+            <td><p align = "left"><a href="https://doi.org/10.1007/978-1-84628-445-8" target="_blank" rel="noopener noreferrer">Choi, S., Canfield, R.A. & Grandhi, R.V.  (2021). https://doi.org/10.1007/978-1-84628-445-8. Springer London, 306 pgs.</a></p></td>
         </tr>
     </tbody>
 </table>
