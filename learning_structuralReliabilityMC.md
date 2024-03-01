@@ -14,3 +14,18 @@ title: Sampling methods
 <!--Don't delete this script-->
 
 <p align="justify">Under construction.</p>
+
+Gaussian or Normal
+{: .label .label-Blue}
+
+Gumbel Maximum
+{: .label .label-Blue}
+
+Gumbel Minimum
+{: .label .label-Blue}
+
+Lognormal
+{: .label .label-Blue}
+
+Uniform
+{: .label .label-Blue}
