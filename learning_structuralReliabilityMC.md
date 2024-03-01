@@ -32,18 +32,26 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 </table>
 
 <br>
+
+
 Gumbel Maximum
 {: .label .label-Blue}
 
 <br>
+
+
 Gumbel Minimum
 {: .label .label-Blue}
 
 <br>
+
+
 Lognormal
 {: .label .label-Blue}
 
 <br>
+
+
 Uniform
 {: .label .label-Blue}
 
