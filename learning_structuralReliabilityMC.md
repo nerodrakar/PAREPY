@@ -18,7 +18,11 @@ title: Sampling methods
 Gaussian or Normal
 {: .label .label-Blue}
 
+<p aling = "justify">
 The Gaussian or Normal distribution is by far one of the most important probability distributions in literature, and it is used in many fields of engineering and science due to its simplicity and convenience. This distribution is used to model the Poisson's ratio, among other material properties, for example <a href="#ref1">[1]</a>. It is possible to say that a random variable \(X\) has a Gaussian distribution if its probability density function follows the expression.
+</p>
+
+
 
 <table style = "width:100%">
     <tr>
