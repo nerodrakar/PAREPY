@@ -11,4 +11,6 @@ nav_order: 1
   </tr>
 </table>  
 
-<p align="justify">If you have any suggestions or error reports regarding the algorithm's functioning, please inform us by email at <b><i>wanderlei_junior@ufcat.edu.br</i></b>. We will be happy to improve the platform.</p>
+{: .note }
+> If you have any suggestions or error reports regarding the algorithm's functioning, please inform us by email: `wanderlei_junior@ufcat.edu.br`. We will be happy to improve the framework.
+
