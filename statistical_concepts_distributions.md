@@ -73,10 +73,17 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
         <td style="width: 90%;">\[ \sigma_{Y}^{2}=\ln{\left [ \left ( \frac{\sigma_{X}}{\mu_{X}} \right )^{2} +1 \right ]} \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq5">(5)</p></td>
     </tr>
+    <tr>
+        <td style="width: 90%;">\[ \mu_{Y}=\ln{\mu_{X}} - \frac{1}{2}\sigma_{Y}^{2} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq6">(6)</p></td>
+    </tr>
 </table>
-
 <br>
 
+<p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
+<center><img src="assets/images/#LogNormal_Density_Function.png" width="50%"></center>
+
+#LogNormal_Density_Function
 
 Uniform
 {: .label .label-Blue}
