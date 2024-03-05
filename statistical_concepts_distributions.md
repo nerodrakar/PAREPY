@@ -80,10 +80,9 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 </table>
 <br>
 
-<p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
-<center><img src="assets/images/#LogNormal_Density_Function.png" width="50%"></center>
+<p align = "center"><b>Figure 4.</b> Lognormal Density Function.</p>
+<center><img src="assets/images/LogNormal_Density_Function.png" width="50%"></center>
 
-#LogNormal_Density_Function
 
 Uniform
 {: .label .label-Blue}
