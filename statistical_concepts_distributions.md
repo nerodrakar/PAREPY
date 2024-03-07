@@ -55,6 +55,10 @@ The extreme value distribution is used to represent the maximum or minimum of a 
     </tr>
 </table>
 
+<p align = "justify">
+Where \(\alpha\)  and \(u\) are scale and location parameters, respectively.
+</p>
+
 <br>
 
 
