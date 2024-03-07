@@ -18,7 +18,7 @@ Gaussian or Normal
 {: .label .label-Blue}
 
 <p align = "justify">
-The Gaussian or Normal distribution is by far one of the most important probability distributions in literature, and it is used in many fields of engineering and science due to its simplicity and convenience. This distribution is used to model the Poisson's ratio, among other material properties, for example <a href="#ref1">[1]</a>. It is possible to say that a random variable \(X\) has a Gaussian distribution if its probability density function follows the expression presented in Equation <a href="#eq1">1</a>.
+The Gaussian or Normal distribution is by far one of the most important probability distributions in literature, and it is used in many fields of engineering and science due to its simplicity and convenience. This distribution is used to model the Poisson's ratio, among other material properties, for example <a href="#ref1">[1]</a>. It is possible to say that a random variable \(X\) has a Gaussian distribution if its probability density function follows the expression presented in <a href="#eq1">Equation 1</a>.
 </p>
 
 
@@ -31,11 +31,11 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 </table>
 
 <p align = "justify">
-Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(X\), respectively, and \(X\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in Figure 1.
+Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(X\), respectively, and \(X\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in <a href="#fig1"> Figure 1</a>.
 </p>
 
 <p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
-<center><img src="assets/images/Normal_Density_Function.png" width="50%"></center>
+<center><img src="assets/images/Normal_Density_Function.png" width="50%" id = "fig1"></center>
 
 <br>
 
