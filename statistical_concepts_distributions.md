@@ -50,7 +50,7 @@ The extreme value distribution is used to represent the maximum or minimum of a 
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)= \alpha exp\left[ -exp\left( -\alpha(x-u)\right) \right] exp [-\alpha(x-u)] \]</td>
+        <td style="width: 90%;">\[ f_{X}(x)= \alpha \, exp\left[ -exp\left( -\alpha(x-u)\right) \right]\, exp [-\alpha(x-u)] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
     </tr>
 </table>
