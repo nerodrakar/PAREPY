@@ -39,8 +39,21 @@ Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean 
 
 <br>
 
-Gumbel Maximum
+Extreme Value or Gumbel
 {: .label .label-Blue}
+
+
+<p align = "justify">
+The extreme value distribution is used to represent the maximum or minimum of a number of samples of various distributions. There are three types of extreme value distributions, namely Type I, Type II, and Type III. The Type I extreme value distribution, also referred to as the Gumbel distribution, is the distribution of the maximum or minimum of a number of samples of normally distributed data.
+<br>The density function of the Type I extreme value distribution is defined by
+</p>
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{k}{v}\left ( \frac{v}{x}\right )^{k+1} exp\left [ - \left (\frac{v}{k} \right )^{k} \right ] \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>
+</table>
 
 <br>
 
@@ -64,7 +77,7 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\sigma_{y}} \right ) \right ] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq5">(4)</p></td>
+        <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
     </tr>
     <tr>
         <td style="width: 90%;">\[ \sigma_{Y}^{2}=\ln{\left [ \left ( \frac{\sigma_{X}}{\mu_{X}} \right )^{2} +1 \right ]} \]</td>
