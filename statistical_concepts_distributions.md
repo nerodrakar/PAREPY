@@ -102,9 +102,8 @@ The density functions of the Type I and Type II extreme value distributions are 
 </p>
 <br>
 
-
-
-
+<p align = "center"><b>Figure 4.</b> Lognormal Density Function.</p>
+<center><img src="assets/images/Extreme_value_density_functions.png" width="50%"></center>
 
 
 <h3>Reference list</h3>
