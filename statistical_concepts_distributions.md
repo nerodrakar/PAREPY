@@ -44,29 +44,40 @@ Lognormal
 
 
 <p align = "justify">
-The lognormal distribution (Figure 2) performs an important role for engineering in general, since such function is only defined for positive values and there are a large number of physical phenomena that cannot be negative. This distribution can be applied to describe earthquakes distribution, structural failure due to fatigue, material resistance, the yield strength of steel, among others for instance <a href="#ref1">[1]</a>.<br>
+The lognormal distribution (<a href="#fig2">Figure 2</a>) performs an important role for engineering in general, since such function is only defined for positive values and there are a large number of physical phenomena that cannot be negative. This distribution can be applied to describe earthquakes distribution, structural failure due to fatigue, material resistance, the yield strength of steel, among others for instance <a href="#ref1">[1]</a>.<br>
 Suppose a sample of random variable \(X = x_{1},x_{2},x_{3}, ..., x_{n}\) and that the natural logarithms of \(X\) values will be taken, defining a new variable \(Y = \ln{x_{1}},\ln{x_{2}},\ln{x_{3}}, ..., \ln{x_{n}}\). If the variable \(Y\) follows a Normal distribution, then \(X\) is a variable with a lognormal distribution. In other words, if the logarithms of the values of the random variable follow a Normal distribution, then the variable follows a lognormal distribution.<br>
-Thus, it is possible to say that a random variable \(X\) has a lognormal distribution if its probability density function is characterized by Equation 4.
+Thus, it is possible to say that a random variable \(X\) has a lognormal distribution if its probability density function is characterized by <a href="#eq2"> Equation 2</a>.
 </p>
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}\exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\sigma_{Y}} \right ) \right ] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
-    </tr>
-    <tr>
-        <td style="width: 90%;">\[ \sigma_{Y}^{2}=\ln{\left [ \left ( \frac{\sigma_{X}}{\mu_{X}} \right )^{2} +1 \right ]} \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq5">(5)</p></td>
-    </tr>
-    <tr>
-        <td style="width: 90%;">\[ \mu_{Y}=\ln{\mu_{X}} - \frac{1}{2}\sigma_{Y}^{2} \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq6">(6)</p></td>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}\exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\mu_{Y}}{\sigma_{Y}} \right ) \right ] \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(2)</p></td>
     </tr>
 </table>
 <br>
 
-<p align = "center"><b>Figure 4.</b> Lognormal Density Function.</p>
-<center><img src="assets/images/LogNormal_Density_Function.png" width="50%"></center>
+<p align = "justify">
+Where the parameters of the distribution \(\mu_{Y}\) and \(\sigma_{Y}\) denote the mean and standard deviation of the variable \(Y\), presented in <a href="#eq3"> Equation 3</a> and <a href="#eq4"> Equation 4</a>, respectively. 
+</p>
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ \mu_{Y}=\ln{\mu_{X}} - \frac{1}{2}\sigma_{Y}^{2} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
+    </tr>    
+    <tr>
+        <td style="width: 90%;">\[ \sigma_{Y}^{2}=\ln{\left [ \left ( \frac{\sigma_{X}}{\mu_{X}} \right )^{2} +1 \right ]} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>
+
+</table>
+<br>
+
+
+
+<p align = "center"><b>Figure 2.</b> Lognormal Density Function.</p>
+<center><img src="assets/images/LogNormal_Density_Function.png" width="50%" id = "fig1"></center>
 
 Extreme Value or Gumbel
 {: .label .label-Blue}
