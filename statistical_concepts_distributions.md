@@ -127,6 +127,7 @@ The Weibull distribution (<a href="fig4">Figure 4</a>), also referred to as the 
 The probability density function is defined by <a href="eq7"> Equation 7</a>
 </p>
 
+
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ f_{X}(x)=\frac{\alpha x^{\alpha-1}}\beta^{\alpha}\exp\left [ - \left (\frac{x}{\beta} \right )^{\alpha} \right ] \]</td>
