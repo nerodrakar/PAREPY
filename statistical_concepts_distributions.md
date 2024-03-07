@@ -110,7 +110,7 @@ Similar to the relationship between the Gaussian distribution and lognormal dist
 </table>
 
 <p align = "justify">
-The density functions of the Type I and Type II extreme value distributions are shown in <a href="fig3"> Figure 3</a>. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
+The density functions of the Type I and Type II extreme value distributions are shown in <a href="#fig3"> Figure 3</a>. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
 </p>
 <br>
 
