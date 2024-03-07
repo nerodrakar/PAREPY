@@ -51,7 +51,7 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\sigma_{y}} \right ) \right ] \]</td>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\sigma_{Y}} \right ) \right ] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
     </tr>
     <tr>
@@ -86,7 +86,7 @@ The extreme value distribution is used to represent the maximum or minimum of a 
 
 <p align = "justify">
 Where \(\alpha\)  and \(u\) are scale and location parameters, respectively.
-<br>
+<br><br>
 Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters \(u = \ln{v}\), \(\alpha=k\) in the Type I distribution. The Probability Density Function of the Type II extreme value distribution is 
 </p>
 
