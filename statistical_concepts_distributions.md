@@ -86,36 +86,36 @@ Extreme Value or Gumbel
 
 <p align = "justify">
 The extreme value distribution is used to represent the maximum or minimum of a number of samples of various distributions. There are three types of extreme value distributions, namely Type I, Type II, and Type III. The Type I extreme value distribution, also referred to as the Gumbel distribution, is the distribution of the maximum or minimum of a number of samples of normally distributed data.
-<br>The density function of the Type I extreme value distribution is defined by
+<br>The density function of the Type I extreme value distribution is defined by <a href="#eq5"> Equation 5</a>
 </p>
 
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ f_{X}(x)= \alpha \, \exp\left[ -\exp\left( -\alpha(x-u)\right) \right]\, \exp [-\alpha(x-u)] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
+        <td style="width: 10%;"><p align = "right" id = "eq5">(5)</p></td>
     </tr>
 </table>
 
 <p align = "justify">
 Where \(\alpha\)  and \(u\) are scale and location parameters, respectively.
 <br><br>
-Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters \(u = \ln{v}\), \(\alpha=k\) in the Type I distribution. The Probability Density Function of the Type II extreme value distribution is 
+Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters \(u = \ln{v}\), \(\alpha=k\) in the Type I distribution. The Probability Density Function of the Type II extreme value distribution is defined by <a href="#eq6"> Equation 6</a> 
 </p>
 
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ f_{X}(x)=\frac{k}{v}\left ( \frac{v}{x}\right )^{k+1} exp\left [ - \left (\frac{v}{k} \right )^{k} \right ] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+        <td style="width: 10%;"><p align = "right" id = "eq6">(6)</p></td>
     </tr>
 </table>
 
 <p align = "justify">
-The density functions of the Type I and Type II extreme value distributions are shown in Figure 2.7. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
+The density functions of the Type I and Type II extreme value distributions are shown in <a href="fig"> Figure 3</a>. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
 </p>
 <br>
 
-<p align = "center"><b>Figure 4.</b> Extrem Value Density Function.</p>
-<center><img src="assets/images/Extreme_value_density_functions.png" width="50%"></center>
+<p align = "center"><b>Figure 3.</b> Extrem Value Density Function.</p>
+<center><img src="assets/images/Extreme_value_density_functions.png" width="50%" id="fig3"></center>
 
 <br>
 
