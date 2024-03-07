@@ -123,7 +123,7 @@ Weibull
 {: .label .label-Blue}
 
 <p align = "justify">
-The Weibull distribution (<a href="fig4">Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites <a href="#ref4">[4]</a>. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
+The Weibull distribution (<a href="#fig4">Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites <a href="#ref4">[4]</a>. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
 The probability density function is defined by <a href="eq7"> Equation 7</a>
 </p>
 
