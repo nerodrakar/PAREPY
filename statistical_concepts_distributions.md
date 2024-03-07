@@ -39,38 +39,6 @@ Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean 
 
 <br>
 
-Extreme Value or Gumbel
-{: .label .label-Blue}
-
-
-<p align = "justify">
-The extreme value distribution is used to represent the maximum or minimum of a number of samples of various distributions. There are three types of extreme value distributions, namely Type I, Type II, and Type III. The Type I extreme value distribution, also referred to as the Gumbel distribution, is the distribution of the maximum or minimum of a number of samples of normally distributed data.
-<br>The density function of the Type I extreme value distribution is defined by
-</p>
-
-<table style = "width:100%">
-    <tr>
-        <td style="width: 90%;">\[ f_{X}(x)= \alpha \, \exp\left[ -\exp\left( -\alpha(x-u)\right) \right]\, \exp [-\alpha(x-u)] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
-    </tr>
-</table>
-
-<p align = "justify">
-Where \(\alpha\)  and \(u\) are scale and location parameters, respectively.
-<br>
-Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters \(u = \ln v\), Į = k in the Type I distribution. The Probability Density Function of the Type II extreme value distribution is 
-</p>
-
-<table style = "width:100%">
-    <tr>
-        <td style="width: 90%;">\[ f_{X}(x)=\frac{k}{v}\left ( \frac{v}{x}\right )^{k+1} exp\left [ - \left (\frac{v}{k} \right )^{k} \right ] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
-    </tr>
-</table>
-
-<br>
-
-
 Lognormal
 {: .label .label-Blue}
 
@@ -99,6 +67,43 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 
 <p align = "center"><b>Figure 4.</b> Lognormal Density Function.</p>
 <center><img src="assets/images/LogNormal_Density_Function.png" width="50%"></center>
+
+Extreme Value or Gumbel
+{: .label .label-Blue}
+
+
+<p align = "justify">
+The extreme value distribution is used to represent the maximum or minimum of a number of samples of various distributions. There are three types of extreme value distributions, namely Type I, Type II, and Type III. The Type I extreme value distribution, also referred to as the Gumbel distribution, is the distribution of the maximum or minimum of a number of samples of normally distributed data.
+<br>The density function of the Type I extreme value distribution is defined by
+</p>
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ f_{X}(x)= \alpha \, \exp\left[ -\exp\left( -\alpha(x-u)\right) \right]\, \exp [-\alpha(x-u)] \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
+    </tr>
+</table>
+
+<p align = "justify">
+Where \(\alpha\)  and \(u\) are scale and location parameters, respectively.
+<br>
+Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters \(u = \ln{v}\), \(\alpha=k\) in the Type I distribution. The Probability Density Function of the Type II extreme value distribution is 
+</p>
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{k}{v}\left ( \frac{v}{x}\right )^{k+1} exp\left [ - \left (\frac{v}{k} \right )^{k} \right ] \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>
+</table>
+
+<p align = "justify">
+The density functions of the Type I and Type II extreme value distributions are shown in Figure 2.7. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
+</p>
+<br>
+
+
+
 
 
 
