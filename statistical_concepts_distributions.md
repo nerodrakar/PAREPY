@@ -25,7 +25,7 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{\sqrt{2\pi}\sigma}exp\left [ - \frac{1}{2}\left ( \frac{x-\mu}{\sigma} \right ) \right ] \]</td>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left [ - \frac{1}{2}\left ( \frac{x-\mu}{\sigma} \right ) \right ] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
     </tr>
 </table>
@@ -51,7 +51,7 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\sigma_{Y}} \right ) \right ] \]</td>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}\exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\lambda}{\sigma_{Y}} \right ) \right ] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
     </tr>
     <tr>
@@ -104,6 +104,28 @@ The density functions of the Type I and Type II extreme value distributions are 
 
 <p align = "center"><b>Figure 4.</b> Extrem Value Density Function.</p>
 <center><img src="assets/images/Extreme_value_density_functions.png" width="50%"></center>
+
+<br>
+
+Weibull
+{: .label .label-Blue}
+
+<p align = "justify">
+The Weibull distribution (Figure 2.8), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
+The probability density function is  
+</p>
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{\alphax^{\alpha-1}}{\beta^{\alpha}\exp\left [ - \left (\frac{x}{\beta} \right )^{\alpa} \right ] \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>
+</table>
+
+<p align = "justify">
+Every location is characterized by a particular shape and scale parameter. This is a two-parameter family, \(\alpha\) and \(\beta\).
+</p>
+
 
 
 <h3>Reference list</h3>
