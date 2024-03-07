@@ -50,7 +50,7 @@ The extreme value distribution is used to represent the maximum or minimum of a 
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)= \alpha \, exp\left[ -exp\left( -\alpha(x-u)\right) \right]\, exp [-\alpha(x-u)] \]</td>
+        <td style="width: 90%;">\[ f_{X}(x)= \alpha \, \exp\left[ -\exp\left( -\alpha(x-u)\right) \right]\, \exp [-\alpha(x-u)] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
     </tr>
 </table>
@@ -58,8 +58,7 @@ The extreme value distribution is used to represent the maximum or minimum of a 
 <p align = "justify">
 Where \(\alpha\)  and \(u\) are scale and location parameters, respectively.
 <br>
-Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters u = ln v, Į = k in the Type I distribution. The PDF of the Type II extreme value distribution is
-
+Similar to the relationship between the Gaussian distribution and lognormal distribution, the Type II extreme value distribution, also referred to as the Frechet distribution, can be derived by using parameters \(u = \ln v\), Į = k in the Type I distribution. The Probability Density Function of the Type II extreme value distribution is 
 </p>
 
 <table style = "width:100%">
@@ -68,12 +67,6 @@ Similar to the relationship between the Gaussian distribution and lognormal dist
         <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
     </tr>
 </table>
-
-<br>
-
-
-Gumbel Minimum
-{: .label .label-Blue}
 
 <br>
 
