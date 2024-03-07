@@ -110,11 +110,11 @@ Similar to the relationship between the Gaussian distribution and lognormal dist
 </table>
 
 <p align = "justify">
-The density functions of the Type I and Type II extreme value distributions are shown in <a href="fig"> Figure 3</a>. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
+The density functions of the Type I and Type II extreme value distributions are shown in <a href="fig3"> Figure 3</a>. The following subsection will discuss the last type of the extreme value distribution, the Type III extreme value distribution, also known as the Weibull distribution.
 </p>
 <br>
 
-<p align = "center"><b>Figure 3.</b> Extrem Value Density Function.</p>
+<p align = "center"><b>Figure 3.</b> Extrem Value or Gumbel Density Function.</p>
 <center><img src="assets/images/Extreme_value_density_functions.png" width="50%" id="fig3"></center>
 
 <br>
@@ -123,14 +123,14 @@ Weibull
 {: .label .label-Blue}
 
 <p align = "justify">
-The Weibull distribution (Figure 2.8), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
-The probability density function is  
+The Weibull distribution (<a href="fig4"> Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
+The probability density function is defined by <a href="eq7"> Equation 7</a>
 </p>
 
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ f_{X}(x)=\frac{\alpha x^{\alpha-1}}\beta^{\alpha}\exp\left [ - \left (\frac{x}{\beta} \right )^{\alpha} \right ] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+        <td style="width: 10%;"><p align = "right" id = "eq7">(7)</p></td>
     </tr>
 </table>
 
@@ -138,7 +138,8 @@ The probability density function is
 Every location is characterized by a particular shape and scale parameter. This is a two-parameter family, \(\alpha\) and \(\beta\).
 </p>
 
-
+<p align = "center"><b>Figure 4.</b> Weilbull Density Function.</p>
+<center><img src="assets/images/Weibull_Density_Function.png" width="50%" id="fig4"></center>
 
 <h3>Reference list</h3>
 
