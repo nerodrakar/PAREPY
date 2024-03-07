@@ -31,7 +31,7 @@ The Gaussian or Normal distribution is by far one of the most important probabil
 </table>
 
 <p align = "justify">
-Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(X\), respectively, and \(X\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in <a href="#fig1"> Figure 1</a>.
+Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean and standard deviation of the variable \(X\), respectively, and \(X\) is identified as \(N(\mu,\sigma)\). The location (\(\mu\)) and scale (\(\sigma\)) parameters generate a family of distributions, as a presented in <a href="#fig1">Figure 1</a>.
 </p>
 
 <p align = "center"><b>Figure 1.</b> Normal Density Function.</p>
@@ -46,7 +46,7 @@ Lognormal
 <p align = "justify">
 The lognormal distribution (<a href="#fig2">Figure 2</a>) performs an important role for engineering in general, since such function is only defined for positive values and there are a large number of physical phenomena that cannot be negative. This distribution can be applied to describe earthquakes distribution, structural failure due to fatigue, material resistance, the yield strength of steel, among others for instance <a href="#ref1">[1]</a>.<br>
 Suppose a sample of random variable \(X = x_{1},x_{2},x_{3}, ..., x_{n}\) and that the natural logarithms of \(X\) values will be taken, defining a new variable \(Y = \ln{x_{1}},\ln{x_{2}},\ln{x_{3}}, ..., \ln{x_{n}}\). If the variable \(Y\) follows a Normal distribution, then \(X\) is a variable with a lognormal distribution. In other words, if the logarithms of the values of the random variable follow a Normal distribution, then the variable follows a lognormal distribution.<br>
-Thus, it is possible to say that a random variable \(X\) has a lognormal distribution if its probability density function is characterized by <a href="#eq2"> Equation 2</a>.
+Thus, it is possible to say that a random variable \(X\) has a lognormal distribution if its probability density function is characterized by <a href="#eq2">Equation 2</a>.
 </p>
 
 <table style = "width:100%">
@@ -58,7 +58,7 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 <br>
 
 <p align = "justify">
-Where the parameters of the distribution  \(\sigma_{Y}\) and \(\mu_{Y}\) denote the standard deviation and mean of the variable \(Y\), presented in <a href="#eq3"> Equation 3</a> and <a href="#eq4"> Equation 4</a>, respectively. The parameters of the distribution  \(\sigma_{X}\) and \(\mu_{X}\) denote the standard deviation and mean of the variable \(X\)
+Where the parameters of the distribution  \(\sigma_{Y}\) and \(\mu_{Y}\) denote the standard deviation and mean of the variable \(Y\), presented in <a href="#eq3">Equation 3</a> and <a href="#eq4">Equation 4</a>, respectively. The parameters of the distribution  \(\sigma_{X}\) and \(\mu_{X}\) denote the standard deviation and mean of the variable \(X\)
 </p>
 
 <table style = "width:100%">
@@ -123,7 +123,7 @@ Weibull
 {: .label .label-Blue}
 
 <p align = "justify">
-The Weibull distribution (<a href="fig4"> Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
+The Weibull distribution (<a href="fig4">=Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
 The probability density function is defined by <a href="eq7"> Equation 7</a>
 </p>
 
