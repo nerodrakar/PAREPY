@@ -117,7 +117,7 @@ The probability density function is
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ f_{X}(x)=\frac{\alphax^{\alpha-1}}{\beta^{\alpha}\exp\left [ - \left (\frac{x}{\beta} \right )^{\alpa} \right ] \]</td>
+        <td style="width: 90%;">\[ f_{X}(x)=\frac{\alphax^{\alpha-1}}\beta^{\alpha}\exp\left [ - \left (\frac{x}{\beta} \right )^{\alpa} \right ] \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
     </tr>
 </table>
