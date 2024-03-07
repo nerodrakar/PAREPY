@@ -85,7 +85,7 @@ Extreme Value or Gumbel
 
 
 <p align = "justify">
-The extreme value distribution is used to represent the maximum or minimum of a number of samples of various distributions. There are three types of extreme value distributions, namely Type I, Type II, and Type III. The Type I extreme value distribution, also referred to as the Gumbel distribution, is the distribution of the maximum or minimum of a number of samples of normally distributed data.
+The extreme value distribution is used to represent the maximum or minimum of a number of samples of various distributions. There are three types of extreme value distributions, namely Type I, Type II, and Type III <a href="#ref3">[3]</a>. The Type I extreme value distribution, also referred to as the Gumbel distribution, is the distribution of the maximum or minimum of a number of samples of normally distributed data .
 <br>The density function of the Type I extreme value distribution is defined by <a href="#eq5"> Equation 5</a>
 </p>
 
@@ -160,6 +160,12 @@ Every location is characterized by a particular shape and scale parameter. This 
         <tr>
             <td><p align = "center" id = "ref2">[2]</p></td>
             <td><p align = "left"><a href="https://doi.org/10.1016/B978-0-12-382038-9.00010-7" target="_blank" rel="noopener noreferrer">Chang, K. (2015). Chapter 10 - Reliability Analysis. e-Design, Elsevier, 523-595.</a></p></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td><p align = "center" id = "ref3">[3]</p></td>
+            <td><p align = "left"><a href="https://doi.org/10.1155/2022/5449751" target="_blank" rel="noopener noreferrer">Abdulali, A. A. A.; Abu Bakar, M. A.; Ibrahim, K.; Mohd Ariff, N.  (2022). Distributions: An Overview of Estimation and Simulation", Journal of Probability and Statistics, p. 1–17.</a></p></td>
         </tr>
     </tbody>
 </table>
