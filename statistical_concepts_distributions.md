@@ -77,7 +77,7 @@ Where the parameters of the distribution \(\mu_{Y}\) and \(\sigma_{Y}\) denote t
 
 
 <p align = "center"><b>Figure 2.</b> Lognormal Density Function.</p>
-<center><img src="assets/images/LogNormal_Density_Function.png" width="50%" id = "fig1"></center>
+<center><img src="assets/images/LogNormal_Density_Function.png" width="50%" id = "fig2"></center>
 
 Extreme Value or Gumbel
 {: .label .label-Blue}
