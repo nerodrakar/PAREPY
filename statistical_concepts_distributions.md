@@ -52,7 +52,7 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ f_{X}(x)=\frac{1}{x\sqrt{2\pi}\sigma_{Y}}\exp\left [ - \frac{1}{2}\left ( \frac{\ln{x}-\mu_{Y}}{\sigma_{Y}} \right ) \right ] \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq3">(2)</p></td>
+        <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
     </tr>
 </table>
 <br>
