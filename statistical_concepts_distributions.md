@@ -159,7 +159,7 @@ Every location is characterized by a particular shape and scale parameter. This 
     <tbody>
         <tr>
             <td><p align = "center" id = "ref2">[2]</p></td>
-            <td><p align = "left"><a href="https://doi.org/10.1016/B978-0-12-382038-9.00010-7" target="_blank" rel="noopener noreferrer">Chang, K. (2015). Chapter 10 - Reliability Analysis. e-Design, Elsevier, 523-595.</a></p></td>
+            <td><p align = "left"><a href="https://www.sciencedirect.com/book/9780123820389/e-design" target="_blank" rel="noopener noreferrer">Chang, K. (2016). Chapter 10 - Reliability Analysis.e-Design: Computer-Aided Engineering Design. Revised first edition ed. Amsterdam, Elsevier/Academic Press, 519-589.</a></p></td>
         </tr>
     </tbody>
     <tbody>
