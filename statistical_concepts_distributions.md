@@ -44,7 +44,7 @@ Lognormal
 
 
 <p align = "justify">
-The lognormal distribution (<a href="#fig2">Figure 2</a>) performs an important role for engineering in general, since such function is only defined for positive values and there are a large number of physical phenomena that cannot be negative. This distribution can be applied to describe earthquakes distribution, structural failure due to fatigue, material resistance, the yield strength of steel, among others for instance <a href="#ref1">[1]</a>.<br>
+The lognormal distribution (<a href="#fig2">Figure 2</a>) performs an important role for engineering in general, since such function is only defined for positive values and there are a large number of physical phenomena that cannot be negative. This distribution can be applied to describe earthquakes distribution, structural failure due to fatigue, material resistance, the yield strength of steel, among others for instance <a href="#ref2">[2]</a>.<br>
 Suppose a sample of random variable \(X = x_{1},x_{2},x_{3}, ..., x_{n}\) and that the natural logarithms of \(X\) values will be taken, defining a new variable \(Y = \ln{x_{1}},\ln{x_{2}},\ln{x_{3}}, ..., \ln{x_{n}}\). If the variable \(Y\) follows a Normal distribution, then \(X\) is a variable with a lognormal distribution. In other words, if the logarithms of the values of the random variable follow a Normal distribution, then the variable follows a lognormal distribution.<br>
 Thus, it is possible to say that a random variable \(X\) has a lognormal distribution if its probability density function is characterized by <a href="#eq2">Equation 2</a>.
 </p>
@@ -154,6 +154,12 @@ Every location is characterized by a particular shape and scale parameter. This 
         <tr>
             <td><p align = "center" id = "ref1">[1]</p></td>
             <td><p align = "left"><a href="https://doi.org/10.1007/978-1-84628-445-8" target="_blank" rel="noopener noreferrer">Choi, S., Canfield, R.A. & Grandhi, R.V.  (2007). https://doi.org/10.1007/978-1-84628-445-8. Springer London, 306 pgs.</a></p></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td><p align = "center" id = "ref2">[2]</p></td>
+            <td><p align = "left"><a href="https://doi.org/10.1016/B978-0-12-382038-9.00010-7" target="_blank" rel="noopener noreferrer">Chang, K.(2015). Chapter 10 - Reliability Analysis. e-Design, Elsevier, 523-595.</a></p></td>
         </tr>
     </tbody>
 </table>
