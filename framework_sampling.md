@@ -166,7 +166,7 @@ Example 1
 {: .label .label-blue }
 
 <p align = "justify">
-    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Normal distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Normal distribution with mean \(\mu = 3.00\) and standard deviation \(\sigma = 1.00\). Use "seed without control" in your setup.</i>
 </p>
 
 ```python
@@ -209,7 +209,7 @@ Example 2
 {: .label .label-blue }
 
 <p align = "justify">
-    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Gumbel Max distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Gumbel Max distribution with mean \(\mu = 3.00\) and standard deviation \(\sigma = 1.00\). Use "seed without control" in your setup.</i>
 </p>
 
 ```python
@@ -252,7 +252,7 @@ Example 3
 {: .label .label-blue }
 
 <p align = "justify">
-    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Gumbel Min distribution with mean \(\mu = 3\) and standard deviation \(\sigma = 1\). Use "seed without control" in your setup.</i>
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Gumbel Min distribution with mean \(\mu = 3.00\) and standard deviation \(\sigma = 1.00\). Use "seed without control" in your setup.</i>
 </p>
 
 ```python
@@ -376,3 +376,91 @@ random variables n=1000:
 
 <p align = "center"><b>Figure 5.</b> Lognormal Distribution using Sampling function.</p>
 <center><img src="assets/images/lognormal_distribution.svg" width="70%"></center>
+
+
+Example 6
+{: .label .label-blue }
+
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Normal distribution and a Gumbel Max distribution, both with mean \(\mu = 3.00\) and standard deviation \(\sigma = 1.00\). Use "seed without control" in your setup.</i>
+</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+model = {'model sampling': 'mcs'}
+f = {'type': 'normal', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+v = {'type': 'gumbel max', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+varSet = [f, v]
+
+# Call function
+randomVariables = sampling(1000, len(varSet), model, varSet)
+
+# Output details
+print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n type variable: {type(randomVariables)}')
+```
+
+```bash
+random variables n=1000: 
+
+ [[3.38720174 2.66784302]
+ [3.49461632 2.76750307]
+ [2.9982122  1.83116894]
+ ...
+ [3.82247618 2.50820437]
+ [1.13765184 3.03439417]
+ [0.28202896 4.3233388 ]]
+
+ type variable: <class 'numpy.ndarray'>
+```
+
+<p align = "center"><b>Figure 6.</b> (a) Normal Distribution and (b) Gumbel Max Distribution using Sampling function.</p>
+<center><img src="assets/images/normal_distribution.svg" width="70%"></center>
+<p align = "center">(a)</p>
+<center><img src="assets/images/gumbelmax_distribution.svg" width="70%"></center>
+<p align = "center">(b)</p>
+
+
+Example 7
+{: .label .label-blue }
+
+<p align = "justify">
+    <i>In this example, we will use the <code>sampling</code> function to generate a set of random samples \((n=1000)\) following a Normal distribution and a Gumbel Min distribution, both with mean \(\mu = 3.00\) and standard deviation \(\sigma = 1.00\). Use "seed without control" in your setup.</i>
+</p>
+
+```python
+from parepy_toolbox import sampling
+
+# Dataset
+model = {'model sampling': 'mcs'}
+f = {'type': 'normal', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+v = {'type': 'gumbel min', 'loc': 3.00, 'scale': 1.00, 'seed': None}
+varSet = [f, v]
+
+# Call function
+randomVariables = sampling(1000, len(varSet), model, varSet)
+
+# Output details
+print(f'random variables n={len(randomVariables)}: \n\n {randomVariables} \n\n type variable: {type(randomVariables)}')
+```
+
+```bash
+random variables n=1000: 
+
+ [[4.86230487 3.65774593]
+ [3.03147707 1.70716801]
+ [3.27870656 2.56084785]
+ ...
+ [0.90097931 2.21278157]
+ [3.0442953  2.38984915]
+ [1.88344245 3.77978042]]
+
+ type variable: <class 'numpy.ndarray'>
+```
+
+<p align = "center"><b>Figure 7.</b> (a) Normal Distribution and (b) Gumbel Min Distribution using Sampling function.</p>
+<center><img src="assets/images/normal_distribution.svg" width="70%"></center>
+<p align = "center">(a)</p>
+<center><img src="assets/images/gumbelmin_distribution.svg" width="70%"></center>
+<p align = "center">(b)</p>
