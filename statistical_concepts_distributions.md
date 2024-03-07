@@ -123,7 +123,7 @@ Weibull
 {: .label .label-Blue}
 
 <p align = "justify">
-The Weibull distribution (<a href="fig4">=Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
+The Weibull distribution (<a href="fig4">Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
 The probability density function is defined by <a href="eq7"> Equation 7</a>
 </p>
 
@@ -153,13 +153,13 @@ Every location is characterized by a particular shape and scale parameter. This 
     <tbody>
         <tr>
             <td><p align = "center" id = "ref1">[1]</p></td>
-            <td><p align = "left"><a href="https://doi.org/10.1007/978-1-84628-445-8" target="_blank" rel="noopener noreferrer">Choi, S., Canfield, R.A. & Grandhi, R.V.  (2007). https://doi.org/10.1007/978-1-84628-445-8. Springer London, 306 pgs.</a></p></td>
+            <td><p align = "left"><a href="https://doi.org/10.1007/978-1-84628-445-8" target="_blank" rel="noopener noreferrer">Choi, S., Canfield, R.A. & Grandhi, R.V.  (2007). Reliability-based Structural Design. Springer London, 306 pgs.</a></p></td>
         </tr>
     </tbody>
     <tbody>
         <tr>
             <td><p align = "center" id = "ref2">[2]</p></td>
-            <td><p align = "left"><a href="https://doi.org/10.1016/B978-0-12-382038-9.00010-7" target="_blank" rel="noopener noreferrer">Chang, K.(2015). Chapter 10 - Reliability Analysis. e-Design, Elsevier, 523-595.</a></p></td>
+            <td><p align = "left"><a href="https://doi.org/10.1016/B978-0-12-382038-9.00010-7" target="_blank" rel="noopener noreferrer">Chang, K. (2015). Chapter 10 - Reliability Analysis. e-Design, Elsevier, 523-595.</a></p></td>
         </tr>
     </tbody>
 </table>
