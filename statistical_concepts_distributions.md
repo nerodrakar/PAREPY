@@ -123,7 +123,7 @@ Weibull
 {: .label .label-Blue}
 
 <p align = "justify">
-The Weibull distribution (<a href="fig4">Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
+The Weibull distribution (<a href="fig4">Figure 4</a>), also referred to as the Type III extreme value distribution, is well suited for describing the weakest link phenomena, or a situation where there are competing flaws contributing to failure. It is often used to describe fatigue, fracture of brittle materials, and strength in composites <a href="#ref4">[4]</a>. The distribution of wind speeds at a given location on Earth can also be described with this distribution.
 The probability density function is defined by <a href="eq7"> Equation 7</a>
 </p>
 
@@ -165,7 +165,13 @@ Every location is characterized by a particular shape and scale parameter. This 
     <tbody>
         <tr>
             <td><p align = "center" id = "ref3">[3]</p></td>
-            <td><p align = "left"><a href="https://doi.org/10.1155/2022/5449751" target="_blank" rel="noopener noreferrer">Abdulali, A. A. A.; Abu Bakar, M. A.; Ibrahim, K.; Mohd Ariff, N.  (2022). Distributions: An Overview of Estimation and Simulation", Journal of Probability and Statistics, p. 1–17.</a></p></td>
+            <td><p align = "left"><a href="https://doi.org/10.1155/2022/5449751" target="_blank" rel="noopener noreferrer">Abdulali, A. A. A.; Abu Bakar, M. A.; Ibrahim, K.; Mohd Ariff, N.  (2022). Distributions: An Overview of Estimation and Simulation, Journal of Probability and Statistics, p. 1–17.</a></p></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td><p align = "center" id = "ref4">[4]</p></td>
+            <td><p align = "left"><a href="https://doi.org/10.3390/ma15113911" target="_blank" rel="noopener noreferrer">Kumar, R.; Madsen, B.; Lilholt, H.; Mikkelsen, L. P. (2022). Influence of Test Specimen Geometry on Probability of Failure of Composites Based on Weibull Weakest Link Theory, Materials, v. 15, n. 11, p. 3911</a></p></td>
         </tr>
     </tbody>
 </table>
