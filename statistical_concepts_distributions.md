@@ -39,9 +39,6 @@ Where the parameters of the distribution \(\mu\) and \(\sigma\) denote the mean 
 
 <br>
 
-Teste 
-<br>
-
 Gumbel Maximum
 {: .label .label-Blue}
 
