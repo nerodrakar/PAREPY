@@ -58,18 +58,19 @@ Thus, it is possible to say that a random variable \(X\) has a lognormal distrib
 <br>
 
 <p align = "justify">
-Where the parameters of the distribution \(\mu_{Y}\) and \(\sigma_{Y}\) denote the mean and standard deviation of the variable \(Y\), presented in <a href="#eq3"> Equation 3</a> and <a href="#eq4"> Equation 4</a>, respectively. 
+Where the parameters of the distribution  \(\sigma_{Y}\) and \(\mu_{Y}\) denote the standard deviation and mean of the variable \(Y\), presented in <a href="#eq3"> Equation 3</a> and <a href="#eq4"> Equation 4</a>, respectively. The parameters of the distribution  \(\sigma_{X}\) and \(\mu_{X}\) denote the standard deviation and mean of the variable \(X\)
 </p>
 
 <table style = "width:100%">
     <tr>
+        <td style="width: 90%;">\[ \sigma_{Y}^{2}=\ln{\left [ \left ( \frac{\sigma_{X}}{\mu_{X}} \right )^{2} +1 \right ]} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>    
+    <tr>
         <td style="width: 90%;">\[ \mu_{Y}=\ln{\mu_{X}} - \frac{1}{2}\sigma_{Y}^{2} \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
     </tr>    
-    <tr>
-        <td style="width: 90%;">\[ \sigma_{Y}^{2}=\ln{\left [ \left ( \frac{\sigma_{X}}{\mu_{X}} \right )^{2} +1 \right ]} \]</td>
-        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
-    </tr>
+
 
 </table>
 <br>
