@@ -16,8 +16,35 @@ Example 1
 {: .label .label-blue }
 
 <p align="justify">
-A simply supported timber beam of length 5 \(m\) is loaded with a central load Q having mean \(\mu_Q =\) 3 \(kN\) and with a coefficient of variation (COV) of 0.33 (Normal distribution). The bending strength of similar beams has been found to have a mean strength \(\mu_R =\) 10 \(kN.m\) with a coefficient of variation (COV) of 0.15 (Normal distribution). It is desired to evaluate the probability of failure and reliability index <a href="#ref1">[1]</a>.
-</p> 
+Consider the simply supported beam show in example 5.1 Nowak and Collins <a href="#ref1">[1]</a>. The beam is subjected to a concentrated live load \(p\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume \(\boldsymbol{P}, \boldsymbol{W}\) and the yield stress, \(\boldsymbol{F_y}\), are random quantities; the length \(l\) and the plastic setion modulus \(z\) are assumed to be precisely know (deterministic). The distribution parameters for \(\boldsymbol{P}, \boldsymbol{W}\) and \(\boldsymbol{F_y}\) are given bellow:<br><br>
+<table style = "width:100%">
+    <tr>
+        <th style="width: 25%;">Variable</th>
+        <th style="width: 25%;">Distribution</th>
+        <th style="width: 25%;">Mean</th>
+        <th style="width: 25%;">coefficient of variation (COV)</th>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Live load \(\boldsymbol{F_y}\)</td>
+        <td style="width: 25%;">Normal</td>
+        <td style="width: 25%;">40.3</td>
+        <td style="width: 25%;">0.115</td>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Live load \(\boldsymbol{P}\)</td>
+        <td style="width: 25%;">Gumbel max.</td>
+        <td style="width: 25%;">10.2</td>
+        <td style="width: 25%;">0.110</td>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Dead load \(\boldsymbol{W}\)</td>
+        <td style="width: 25%;">Log-normal</td>
+        <td style="width: 25%;">0.25</td>
+        <td style="width: 25%;">0.100</td>
+    </tr>
+</table>
+
+The limit state function for beam bending can be expressed as:
 
 <table style = "width:100%">
     <tr>
@@ -37,6 +64,8 @@ A simply supported timber beam of length 5 \(m\) is loaded with a central load Q
     </tr>
 </table>
 
+
+</p> 
 <h3><code>of_file.py</code></h3>
 
 ```python
@@ -106,12 +135,59 @@ Example 2
 {: .label .label-blue }
 
 <p align="justify">
-A simply supported timber beam of length 5 \(m\) is loaded with a central load Q having mean \(\mu_Q =\) 3 \(kN\) and with a coefficient of variation (COV) of 0.33 (Normal distribution). The bending strength of similar beams has been found to have a mean strength \(\mu_R =\) 10 \(kN.m\) with a coefficient of variation (COV) of 0.15 (Normal distribution). It is desired to evaluate the probability of failure and reliability index (<a href="#ref1">adapted [1]</a>). Consider equation <a href="#eq4">[4]</a> for resistance degradation. Consider 50 years to stochastic analysis (five time steps).
+Consider the simply supported beam show in example 5.1 Nowak and Collins <a href="#ref1">[1]</a>. The beam is subjected to a concentrated live load \(p\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume \(\boldsymbol{P}, \boldsymbol{W}\) and the yield stress, \(\boldsymbol{F_y}\), are random quantities; the length \(l\) and the plastic setion modulus \(z\) are assumed to be precisely know (deterministic). The distribution parameters for \(\boldsymbol{P}, \boldsymbol{W}\) and \(\boldsymbol{F_y}\) are given bellow:<br><br>
+<table style = "width:100%">
+    <tr>
+        <th style="width: 25%;">Variable</th>
+        <th style="width: 25%;">Distribution</th>
+        <th style="width: 25%;">Mean</th>
+        <th style="width: 25%;">coefficient of variation (COV)</th>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Live load \(\boldsymbol{F_y}\)</td>
+        <td style="width: 25%;">Normal</td>
+        <td style="width: 25%;">40.3</td>
+        <td style="width: 25%;">0.115</td>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Live load \(\boldsymbol{P}\)</td>
+        <td style="width: 25%;">Gumbel max.</td>
+        <td style="width: 25%;">10.2</td>
+        <td style="width: 25%;">0.110</td>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Dead load \(\boldsymbol{W}\)</td>
+        <td style="width: 25%;">Log-normal</td>
+        <td style="width: 25%;">0.25</td>
+        <td style="width: 25%;">0.100</td>
+    </tr>
+</table>
+
+The limit state function for beam bending can be expressed as:
 </p> 
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ D_{t_i} = 1 - \frac{0.2/t_i}{100} \]</td>
+        <td style="width: 90%;">\[ \boldsymbol{R} = 80 \cdot \boldsymbol{F_y} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
+    </tr>
+    <tr>
+        <td style="width: 90%;">\[ \boldsymbol{S} = 54 \cdot \boldsymbol{P} + 5832 \cdot \boldsymbol{W} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
+    </tr>
+    <tr>
+        <td style="width: 90%;">\[ \boldsymbol{G} = \boldsymbol{S} - \boldsymbol{R} \begin{cases}
+\leq 0 & \text{safe}\\ 
+> 0 & \text{failure}
+\end{cases} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>
+</table>
+Consider equation <a href="#eq4">[4]</a> for resistance degradation. Consider 50 years to stochastic analysis (five time steps).
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ D(t_i) = 1 - \frac{0.2/t_i}{100} \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
     </tr>
 </table>
