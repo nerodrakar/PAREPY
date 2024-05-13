@@ -1,11 +1,11 @@
----
+<!-- ---
 layout: home
 parent: Learning
 nav_order: 3
 has_children: true
 has_toc: true
 title: Structural Reliability
----
+--- -->
 
 <!--Don't delete this script-->
 <script src = "https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
