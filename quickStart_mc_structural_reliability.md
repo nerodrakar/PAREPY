@@ -200,7 +200,7 @@ Consider equation <a href="#eq4">[4]</a> for resistance degradation. Consider 50
 def nowak_collins_time_example(x, none_variable):
     """Objective function for the Nowak example (tutorial).
     """
-    # Time id and value (user must copy and paste this code when tim reliability is required)
+    # User must copy and paste this code when tim reliability is required
     ###########################################
     id_analysis = int(x[-1])
     time_step = none_variable['time analysis']
