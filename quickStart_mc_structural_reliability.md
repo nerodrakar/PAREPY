@@ -25,19 +25,19 @@ Consider the simply supported beam show in example 5.1 Nowak and Collins <a href
         <th style="width: 25%;">coefficient of variation (COV)</th>
     </tr>
     <tr>
-        <td style="width: 25%;">Live load \(\boldsymbol{F_y}\)</td>
+        <td style="width: 25%;">Live load (\(\boldsymbol{F_y}\))</td>
         <td style="width: 25%;">Normal</td>
         <td style="width: 25%;">40.3</td>
         <td style="width: 25%;">0.115</td>
     </tr>
     <tr>
-        <td style="width: 25%;">Live load \(\boldsymbol{P}\)</td>
+        <td style="width: 25%;">Live load (\(\boldsymbol{P}\))</td>
         <td style="width: 25%;">Gumbel max.</td>
         <td style="width: 25%;">10.2</td>
         <td style="width: 25%;">0.110</td>
     </tr>
     <tr>
-        <td style="width: 25%;">Dead load \(\boldsymbol{W}\)</td>
+        <td style="width: 25%;">Dead load (\(\boldsymbol{W}\))</td>
         <td style="width: 25%;">Log-normal</td>
         <td style="width: 25%;">0.25</td>
         <td style="width: 25%;">0.100</td>
@@ -144,19 +144,19 @@ Consider the simply supported beam show in example 5.1 Nowak and Collins <a href
         <th style="width: 25%;">coefficient of variation (COV)</th>
     </tr>
     <tr>
-        <td style="width: 25%;">Live load \(\boldsymbol{F_y}\)</td>
+        <td style="width: 25%;">Live load (\(\boldsymbol{F_y}\))</td>
         <td style="width: 25%;">Normal</td>
         <td style="width: 25%;">40.3</td>
         <td style="width: 25%;">0.115</td>
     </tr>
     <tr>
-        <td style="width: 25%;">Live load \(\boldsymbol{P}\)</td>
+        <td style="width: 25%;">Live load (\(\boldsymbol{P}\))</td>
         <td style="width: 25%;">Gumbel max.</td>
         <td style="width: 25%;">10.2</td>
         <td style="width: 25%;">0.110</td>
     </tr>
     <tr>
-        <td style="width: 25%;">Dead load \(\boldsymbol{W}\)</td>
+        <td style="width: 25%;">Dead load (\(\boldsymbol{W}\))</td>
         <td style="width: 25%;">Log-normal</td>
         <td style="width: 25%;">0.25</td>
         <td style="width: 25%;">0.100</td>
@@ -168,7 +168,7 @@ The limit state function for beam bending can be expressed as:
 
 <table style = "width:100%">
     <tr>
-        <td style="width: 90%;">\[ \boldsymbol{R} = 80 \cdot \boldsymbol{F_y} \]</td>
+        <td style="width: 90%;">\[ \boldsymbol{R} = 80 \cdot \boldsymbol{F_y} \cdot D\]</td>
         <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
     </tr>
     <tr>
