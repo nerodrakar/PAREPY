@@ -182,8 +182,8 @@ The limit state function for beam bending can be expressed as:
         <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
     </tr>
 </table>
-Consider equation <a href="#eq4">[4]</a> for resistance degradation. Consider 50 years to stochastic analysis (five time steps).
 
+Consider equation <a href="#eq4">[4]</a> for resistance degradation. Consider 50 years to stochastic analysis (five time steps).
 
 <table style = "width:100%">
     <tr>

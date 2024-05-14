@@ -1,7 +1,7 @@
 ---
 layout: home
-parent: Framework
-grand_parent: common_library
+parent: common_library
+grand_parent: Framework
 nav_order: 1
 has_children: false
 has_toc: false
