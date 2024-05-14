@@ -164,7 +164,6 @@ Consider the simply supported beam show in example 5.1 Nowak and Collins <a href
 </table>
 
 The limit state function for beam bending can be expressed as:
-</p> 
 
 <table style = "width:100%">
     <tr>
@@ -185,12 +184,15 @@ The limit state function for beam bending can be expressed as:
 </table>
 Consider equation <a href="#eq4">[4]</a> for resistance degradation. Consider 50 years to stochastic analysis (five time steps).
 
+
 <table style = "width:100%">
     <tr>
         <td style="width: 90%;">\[ D(t_i) = 1 - \frac{0.2/t_i}{100} \]</td>
         <td style="width: 10%;"><p align = "right" id = "eq4">(4)</p></td>
     </tr>
 </table>
+
+</p> 
 
 <h3><code>of_file.py</code></h3>
 
