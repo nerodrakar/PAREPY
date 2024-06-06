@@ -13,3 +13,16 @@ nav_order: 1
 
 {: .note }
 > If you have any suggestions or error reports regarding the algorithm's functioning, please inform us by email: `wanderlei_junior@ufcat.edu.br`. We will be happy to improve the framework.
+
+{: .new }
+> Current Version
+>
+> 0.0.3
+
+{: .highlight }
+> Team
+>
+> [Prod. PhD Wanderlei Malaquias Pereira Junior](http://lattes.cnpq.br/2268506213083114)
+> [Prod. PhD Daniel de Lima Araújo](http://lattes.cnpq.br/8801080897723883)
+> [Prod. PhD André Teófilo Beck](http://lattes.cnpq.br/4319075758352865)
+> [Prod. PhD André Luis Christoforo](http://lattes.cnpq.br/7623383075429186)
