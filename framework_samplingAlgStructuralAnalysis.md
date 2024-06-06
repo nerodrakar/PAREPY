@@ -1,11 +1,11 @@
-<!-- ---
+---
 layout: home
 parent: Framework
 nav_order: 2
 has_children: false
 has_toc: false
 title: sampling_algorithm_structural_analysis
---- -->
+---
 
 <!--Don't delete ths script-->
 <script src = "https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -13,9 +13,7 @@ title: sampling_algorithm_structural_analysis
 <!--Don't delete ths script-->
 
 <h3>sampling_algorithm_structural_analysis</h3>
-
 <br>
-
 ```python
 df_results, pf, beta = sampling_algorithm_structural_analysis(setup)
 ```
@@ -41,53 +39,48 @@ Input variables
         <td>Dictionary</td>
     </tr>
     <tr>
-        <td><code>setup</code> keys</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td><code>'number of samples'</code></td>
-        <td>Number of samples</td>
+        <td>Number of samples (key in setup dictionary)</td>
         <td>Integer</td>
     </tr>
     <tr>
         <td><code>'dimension'</code></td>
-        <td>Number of dimensions</td>
+        <td>Number of dimensions (key in setup dictionary)</td>
         <td>Integer</td>
     </tr>
     <tr>
-        <td><code>model</code></td>
-        <td><a href="https://wmpjrufg.github.io/PAREPY/framework_sampling#mode" target="_blank" rel="noopener noreferrer">Model parameters</a></td>
+        <td><code>'numerical model'</code></td>
+        <td><a href="https://wmpjrufg.github.io/PAREPY/framework_cl_sampling.html#mode" target="_blank" rel="noopener noreferrer">Model parameters</a> (key in setup dictionary)</td>
         <td>Dictionary</td>
     </tr>
     <tr>
-        <td><code>variables_setup</code></td>
-        <td><a href="https://wmpjrufg.github.io/PAREPY/framework_sampling#vars" target="_blank" rel="noopener noreferrer">Variables parameters</a></td>
+        <td><code>'variables settings'</code></td>
+        <td><a href="https://wmpjrufg.github.io/PAREPY/framework_cl_sampling.html#vars" target="_blank" rel="noopener noreferrer">Variables parameters</a> (key in setup dictionary)</td>
         <td>List</td>
     </tr>
     <tr>
         <td><code>'number of state limit functions or constraints'</code></td>
-        <td>Number of state limit functions or constraints.</td>
+        <td>Number of state limit functions or constraints (key in setup dictionary)</td>
         <td>Integer</td>
     </tr>
     <tr>
         <td><code>'none_variable'</code></td>
-        <td>None variable. Default is <code>None</code>. Use in objective function</td>
+        <td>None variable. Default is None. User can use this variable in objective function (key in setup dictionary)</td>
         <td>None, list, float, dictionary, str or any</td>
     </tr>
     <tr>
         <td><code>'objective function'</code></td>
-        <td>Objective function</td>
-        <td>String</td>
+        <td>Objective function. The Parepy user defined this function (key in setup dictionary)</td>
+        <td>Python function [def]</td>
     </tr>
     <tr>
         <td><code>'type process'</code></td>
-        <td><a href="#arch">Architecture of algorithm</a></td>
+        <td><a href="#arch">Type process</a>. Options: 'auto', 'parallel' or 'serial' (key in setup dictionary)</td>
         <td>String</td>
     </tr>
     <tr>
         <td><code>'name simulation'</code></td>
-        <td>Output filename</td>
+        <td>Output filename (key in setup dictionary)</td>
         <td>String</td>
     </tr>
 </table>
@@ -120,6 +113,7 @@ Output variables
    </tr>
 </table>
 
+<h3>Architecture of algorithm</h3>
 
 <p align = "justify" id = "arch">
     See examples of Architecture of algorithm.
@@ -128,7 +122,7 @@ Output variables
 <h4><i>Serial process</i></h4>
 
 <p align = "justify" id = "arch">
-Serial memory processing is attending to and processing one item at a time.
+Serial architecture processing is attending to and processing one item at a time.
 </p>
 
 ```python
@@ -138,7 +132,7 @@ Serial memory processing is attending to and processing one item at a time.
 <h4><i>Parallel process</i></h4>
 
 <p align = "justify" id = "arch">
-Parallel memory processing is the act of attending to and processing all items simultaneously.
+Parallel achitecture processing is the act of attending to and processing all items simultaneously.
 </p>
 
 ```python
@@ -148,7 +142,7 @@ Parallel memory processing is the act of attending to and processing all items s
 <h4><i>Automatic process</i></h4>
 
 <p align = "justify" id = "arch">
-The algorithm runs ten times the objective function and chooses the method process to spend the minimum amount of time.
+The algorithm runs ten times the objective function and chooses the achitecture to spend the minimum amount of time.
 </p>
 
 ```python
