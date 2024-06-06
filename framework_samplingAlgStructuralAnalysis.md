@@ -149,141 +149,167 @@ The algorithm runs ten times the objective function and chooses the achitecture 
 'type process': 'auto'
 ```
 
-<h4><i><p align = "justify" id = "results">Results in PAREpy Framework</p></i></h4>
-
-
 Example 1
 {: .label .label-blue }
 
-<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(\left(P\right)\) and a uniformly distributed dead load \(\left(w\right)\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress \(\left(f_y\right)\), are random quantities; the lenght \(L=18\;ft\) and plastic section modulus \(Z=80\;in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Using Crude Monte Carlo method determine the value of \(\beta\) index. Use serial architecture and 500.000 samples to solve this example.</p>
-
+<p align="justify">
+Consider the simply supported beam show in example 5.1 Nowak and Collins <a href="#ref1">[1]</a>. The beam is subjected to a concentrated live load \(p\) and a uniformly distributed dead load \(w\). The loads are random variables. Assume \(\boldsymbol{P}, \boldsymbol{W}\) and the yield stress, \(\boldsymbol{F_y}\), are random quantities; the length \(l\) and the plastic setion modulus \(z\) are assumed to be precisely know (deterministic). The distribution parameters for \(\boldsymbol{P}, \boldsymbol{W}\) and \(\boldsymbol{F_y}\) are given bellow:<br><br>
 <table style = "width:100%">
-   <thead>
-     <tr>
-       <th>Name</th>
-       <th>Mean</th>
-       <th>Standard Deviation</th>
-     </tr>
-   </thead>
-   <tr>
-       <td>Yield stress \(\left(f_y\right)\)</td>
-       <td>40.3 \(ksi\)</td>
-       <td>4.64 \(ksi\)</td>
-   </tr>
-   <tr>
-       <td>Concentrated live load \(\left(P\right)\)</td>
-       <td>10.2 \(kip\)</td>
-       <td>1.12 \(kip\)</td>
-   </tr>
-   <tr>
-       <td>Uniformly distributed dead load \(\left(w\right)\)</td>
-       <td>0.25 \(kip/in\)</td>
-       <td>0.025 \(kip/in\)</td>
-   </tr>
+    <tr>
+        <th style="width: 25%;">Variable</th>
+        <th style="width: 25%;">Distribution</th>
+        <th style="width: 25%;">Mean</th>
+        <th style="width: 25%;">coefficient of variation (COV)</th>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Live load (\(\boldsymbol{F_y}\))</td>
+        <td style="width: 25%;">Normal</td>
+        <td style="width: 25%;">40.3</td>
+        <td style="width: 25%;">0.115</td>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Live load (\(\boldsymbol{P}\))</td>
+        <td style="width: 25%;">Gumbel max.</td>
+        <td style="width: 25%;">10.2</td>
+        <td style="width: 25%;">0.110</td>
+    </tr>
+    <tr>
+        <td style="width: 25%;">Dead load (\(\boldsymbol{W}\))</td>
+        <td style="width: 25%;">Log-normal</td>
+        <td style="width: 25%;">0.25</td>
+        <td style="width: 25%;">0.100</td>
+    </tr>
 </table>
 
-<p align = "center"><b>Table 1.</b> Random variables.</p>
+The limit state function for beam bending can be expressed as:
+
+<table style = "width:100%">
+    <tr>
+        <td style="width: 90%;">\[ \boldsymbol{R} = 80 \cdot \boldsymbol{F_y} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq1">(1)</p></td>
+    </tr>
+    <tr>
+        <td style="width: 90%;">\[ \boldsymbol{S} = 54 \cdot \boldsymbol{P} + 5832 \cdot \boldsymbol{W} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq2">(2)</p></td>
+    </tr>
+    <tr>
+        <td style="width: 90%;">\[ \boldsymbol{G} = \boldsymbol{S} - \boldsymbol{R} \begin{cases}
+\leq 0 & \text{safe}\\ 
+> 0 & \text{failure}
+\end{cases} \]</td>
+        <td style="width: 10%;"><p align = "right" id = "eq3">(3)</p></td>
+    </tr>
+</table>
+
+
+</p> 
+<h3><code>of_file.py</code></h3>
 
 ```python
+def nowak_collins_example(x, none_variable):
+    """Objective function for the Nowak example (tutorial).
+    """
+
+    # Random variables
+    f_y = x[0]
+    p_load = x[1]
+    w_load = x[2]
+    capacity = 80*f_y
+    demand = 54*p_load + 5832*w_load
+
+    # State limit function
+    constraint = demand - capacity
+
+    return [capacity], [demand], [constraint]
+```
+
+<h3><code>your_problem.ipynb</code></h3>
+
+```python
+# Libraries
+import pandas as pd
+pd.set_option('display.max_columns', None)
+import numpy as np
+
 from parepy_toolbox import sampling_algorithm_structural_analysis
+from obj_function import nowak_collins_example
 
 # Dataset
 f = {'type': 'normal', 'loc': 40.3, 'scale': 4.64, 'seed': None}
-p = {'type': 'normal', 'loc': 10.2, 'scale': 1.12, 'seed': None}
-w = {'type': 'normal', 'loc': 0.25, 'scale': 0.025, 'seed': None}
-vars = [f, p, w]
+p = {'type': 'gumbel max', 'loc': 10.2, 'scale': 1.12, 'seed': None}
+w = {'type': 'lognormal', 'loc': 0.25, 'scale': 0.025, 'seed': None}
+var = [f, p, w]
 
 # PAREpy setup
 setup = {
-             'number of samples': 500000, 
-             'number of dimensions': len(vars), 
+             'number of samples': 10000, 
+             'number of dimensions': len(var), 
              'numerical model': {'model sampling': 'mcs'}, 
-             'variables settings': vars, 
+             'variables settings': var, 
              'number of state limit functions or constraints': 1, 
              'none variable': None,
-             'objective function': nowak_example,
-             'type process': 'serial',
-             'name simulation': 'nowak_example',
+             'objective function': nowak_collins_example,
+             'type process': 'auto',
+             'name simulation': 'nowak_collins_example',
         }
 
 # Call algorithm
 results, pf, beta = sampling_algorithm_structural_analysis(setup)
-
-# Output details
-print('Beta index: ', beta[0][0])
 ```
 
 ```bash
-Beta index:  3.0123892463595308
+PARE^py Report: 
+
+- Output file name: nowak_example_MCS_20240505-135418.txt
+- Processing time (s): 7.355956315994263  (serial kernel)
 ```
 
-{: .warning }
-> As a result, the first id in the list indicates the id of the state limit function. The second id in the results indicates the outcome of the reliability process. In stochastic analysis, the list is formed by sequence results in each time step. See the second example following.
+<h4><i><p align = "justify" id = "results">Results in PAREpy framework</p></i></h4>
 
-Example 2
-{: .label .label-blue }
-
-<p align = "justify">Consider the simply supported beam shown in the Figure xx. The beam is subjected to a concentrated live load \(\left(P\right)\) and a uniformly distributed dead load \(\left(w\right)\). The loads are random variables. Assume that \(P\), \(w\) and the yield stress \(\left(f_y\right)\), are random quantities; the lenght \(L=18\;ft\) and plastic section modulus \(Z=80\;in³\) are assumed to be precisely known (deterministic) <a href="#ref1">[1]</a>. Using Crude Monte Carlo method determine the value of \(\beta\) index. Use serial architecture and 500.000 samples to solve this example.</p>
-
-<table style = "width:100%">
-   <thead>
-     <tr>
-       <th>Name</th>
-       <th>Mean</th>
-       <th>Standard Deviation</th>
-     </tr>
-   </thead>
-   <tr>
-       <td>Yield stress \(\left(f_y\right)\)</td>
-       <td>40.3 \(ksi\)</td>
-       <td>4.64 \(ksi\)</td>
-   </tr>
-   <tr>
-       <td>Concentrated live load \(\left(P\right)\)</td>
-       <td>10.2 \(kip\)</td>
-       <td>1.12 \(kip\)</td>
-   </tr>
-   <tr>
-       <td>Uniformly distributed dead load \(\left(w\right)\)</td>
-       <td>0.25 \(kip/in\)</td>
-       <td>0.025 \(kip/in\)</td>
-   </tr>
-</table>
-
-<p align = "center"><b>Table 1.</b> Random variables.</p>
+<p align = "justify">
+To access results in structural reliability, you need to print <code>pf</code>, <code>beta</code>, and <code>results</code> variables.
+<code>results</code> contain all samples about simulation. Just print this variable in the command window. See the content in Figure 1.
+</p>
 
 ```python
-from parepy_toolbox import sampling_algorithm_structural_analysis
-
-# Dataset
-f = {'type': 'normal', 'loc': 40.3, 'scale': 4.64, 'seed': None}
-p = {'type': 'normal', 'loc': 10.2, 'scale': 1.12, 'seed': None}
-w = {'type': 'normal', 'loc': 0.25, 'scale': 0.025, 'seed': None}
-vars = [f, p, w]
-
-# PAREpy setup
-setup = {
-             'number of samples': 500000, 
-             'number of dimensions': len(vars), 
-             'numerical model': {'model sampling': 'mcs'}, 
-             'variables settings': vars, 
-             'number of state limit functions or constraints': 1, 
-             'none variable': None,
-             'objective function': nowak_example,
-             'type process': 'serial',
-             'name simulation': 'nowak_example',
-        }
-
-# Call algorithm
-results, pf, beta = sampling_algorithm_structural_analysis(setup)
-
-# Output details
-print('Beta index: ', beta[0][0])
+# jupyter notebook file
+results
 ```
 
 ```bash
-Beta index:  3.0123892463595308
+# python file
+prints(results)
 ```
+
+<p align = "center"><b>Figure 1.</b> <code>results</code> content.</p>
+<center><img src="assets/images/results_dataframe.png" width="80%"></center>
+
+<p align = "justify">
+<code>beta</code> and <code>pf</code> are list variables that contain respective values about reliability index and failure probability. Sample 1 contains just one state limit function. Therefore, the <code>beta</code> and <code>pf</code> lists contain just one value.
+</p>
+
+```python
+print(pf)
+```
+
+```bash
+[[0.0022]]
+```
+
+<p align = "justify">
+Use the command below to see results about the \(g_0\) state limit function.
+</p>
+
+```python
+pf[0][0]
+```
+
+```bash
+0.0022
+```
+
+{: .note }
+> Apply the same process in the ```beta``` variable and obtain your results.
 
 <h3>Reference list</h3>
 

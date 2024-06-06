@@ -128,7 +128,7 @@ PARE^py Report:
 ```
 
 {: .note }
-> See more details in [sampling_algorithm_structural_analysis](https://www.w3schools.com)
+> See more details in [sampling_algorithm_structural_analysis](https://wmpjrufg.github.io/PAREPY/framework_samplingAlgStructuralAnalysis.html)
 
 
 Example 2
