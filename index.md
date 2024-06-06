@@ -17,12 +17,15 @@ nav_order: 1
 {: .new-title }
 > Current Version
 >
-> 0.0.3
+> 0.0.4
 
 {: .highlight-title }
 > Team
 >
-> [Prod. PhD Wanderlei Malaquias Pereira Junior](http://lattes.cnpq.br/2268506213083114)  
-> [Prod. PhD Daniel de Lima Araújo](http://lattes.cnpq.br/8801080897723883)  
-> [Prod. PhD André Teófilo Beck](http://lattes.cnpq.br/4319075758352865)  
-> [Prod. PhD André Luis Christoforo](http://lattes.cnpq.br/7623383075429186)  
+> [Prof. PhD Wanderlei Malaquias Pereira Junior](http://lattes.cnpq.br/2268506213083114)  
+> [Prof. PhD Daniel de Lima Araújo](http://lattes.cnpq.br/8801080897723883)  
+> [Prof. PhD André Teófilo Beck](http://lattes.cnpq.br/4319075758352865)  
+> [Prof. PhD André Luis Christoforo](http://lattes.cnpq.br/7623383075429186)  
+> [Civil Eng. Murilo Carneiro Rodrigues](http://lattes.cnpq.br/6429652195589650)   
+> [Prof. Msc Iuri Fazolin](http://lattes.cnpq.br/3180484792983028)  
+> [Civil Eng. Msc Matheus Henrique M. Moraes](http://lattes.cnpq.br/8465474056220474)   
