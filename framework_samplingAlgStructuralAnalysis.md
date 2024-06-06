@@ -285,7 +285,7 @@ prints(results)
 <center><img src="assets/images/results_dataframe.png" width="80%"></center>
 
 <p align = "justify">
-<code>beta</code> and <code>pf</code> are list variables that contain respective values about reliability index and failure probability. Sample 1 contains just one state limit function. Therefore, the <code>beta</code> and <code>pf</code> lists contain just one value.
+<code>beta</code> and <code>pf</code> are list variables that contain respective values about reliability index and failure probability. Samples contains just one state limit function. Therefore, the <code>beta</code> and <code>pf</code> lists contain just one value.
 </p>
 
 ```python
