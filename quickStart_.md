@@ -17,6 +17,7 @@ title: Quick Start
 
 ```python
 pip install parepy-toolbox
+# or pip install --upgrade parepy-toolbox
 ```
 <h1>Files structure</h1>
 
