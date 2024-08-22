@@ -93,7 +93,7 @@ Example 1
 </p>
 
 ```python
-from parepy_toolbox import sampling, godness_of_fit
+from parepy_toolbox import sampling, goodness_of_fit
 
 model = {'model sampling': 'mcs'}
 f = {'type': 'normal', 'loc': 7, 'scale': 3, 'seed': None}
