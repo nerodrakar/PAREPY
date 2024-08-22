@@ -5,7 +5,7 @@ grand_parent: Framework
 nav_order: 2
 has_children: false
 has_toc: false
-title: goodnesse of fit
+title: goodnesse_of_fit
 ---
 
 <!--Don't delete ths script-->
