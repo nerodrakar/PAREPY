@@ -2,10 +2,10 @@
 layout: home
 parent: common_library
 grand_parent: Framework
-nav_order: 1
+nav_order: 2
 has_children: false
 has_toc: false
-title: godnesse of fit
+title: goodnesse of fit
 ---
 
 <!--Don't delete ths script-->
